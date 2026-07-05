@@ -478,10 +478,11 @@ export default function WofbiPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="darker">
+      <Section tone="cream">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <Reveal>
             <SectionHeading
+              light
               align="left"
               eyebrow="Questions"
               title={
@@ -493,7 +494,7 @@ export default function WofbiPage() {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <Accordion items={faqs} />
+            <Accordion items={faqs} light />
           </Reveal>
         </div>
       </Section>

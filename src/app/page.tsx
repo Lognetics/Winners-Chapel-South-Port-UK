@@ -5,6 +5,7 @@ import { Welcome } from "@/components/home/Welcome";
 import { Stats } from "@/components/home/Stats";
 import { Experience } from "@/components/home/Experience";
 import { Sermons } from "@/components/home/Sermons";
+import { Gallery } from "@/components/home/Gallery";
 import { MinistriesPreview } from "@/components/home/MinistriesPreview";
 import { WofbiBand } from "@/components/home/WofbiBand";
 import { EventsPreview } from "@/components/home/EventsPreview";
@@ -22,6 +23,7 @@ export default function Home() {
       <Stats />
       <Experience />
       <Sermons />
+      <Gallery />
       <MinistriesPreview />
       <WofbiBand />
       <EventsPreview />

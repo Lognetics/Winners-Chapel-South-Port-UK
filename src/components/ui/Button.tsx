@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Icon } from "./Icon";
 
-type Variant = "gold" | "outline" | "ghost" | "white";
+type Variant = "gold" | "outline" | "outlineDark" | "ghost" | "white" | "navy";
 type Size = "sm" | "md" | "lg";
 
 const base =
@@ -11,7 +11,11 @@ const variants: Record<Variant, string> = {
   gold: "bg-gradient-to-b from-gold-300 to-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)] hover:from-gold-200 hover:to-gold-400 hover:shadow-[0_16px_40px_-8px_rgba(212,175,55,0.65)] hover:-translate-y-0.5",
   outline:
     "ring-gold text-cream hover:bg-gold-500/10 hover:border-gold-400 hover:-translate-y-0.5",
+  outlineDark:
+    "border border-navy-900/20 text-navy-800 hover:bg-navy-900/5 hover:border-gold-500 hover:-translate-y-0.5",
   ghost: "text-cream/80 hover:text-gold-300",
+  navy:
+    "bg-navy-900 text-cream hover:bg-navy-800 hover:-translate-y-0.5 shadow-lg",
   white:
     "bg-cream text-navy-900 hover:bg-white hover:-translate-y-0.5 shadow-lg",
 };

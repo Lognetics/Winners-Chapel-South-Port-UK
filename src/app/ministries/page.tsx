@@ -150,10 +150,10 @@ export default function MinistriesPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="darker">
-        <SectionHeading eyebrow="Questions" title={<>Serving <span className="text-gold-gradient">FAQs</span></>} />
+      <Section tone="cream">
+        <SectionHeading light eyebrow="Questions" title={<>Serving <span className="text-gold-gradient">FAQs</span></>} />
         <div className="mx-auto mt-12 max-w-3xl">
-          <Accordion items={faq} />
+          <Accordion items={faq} light />
         </div>
       </Section>
     </>

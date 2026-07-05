@@ -60,7 +60,7 @@ export function Navbar() {
         <nav className="container-x flex h-18 items-center justify-between py-3">
           <Logo />
 
-          <div className="hidden items-center gap-1 xl:flex">
+          <div className="hidden items-center gap-0.5 lg:flex">
             {nav.map((item) => (
               <div
                 key={item.href}
@@ -70,14 +70,14 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[13px] font-medium tracking-tight transition-colors xl:px-4 xl:text-sm ${
                     pathname === item.href
                       ? "text-gold-300"
-                      : "text-cream/75 hover:text-cream"
+                      : "text-cream/70 hover:text-cream"
                   }`}
                 >
                   {item.label}
-                  {item.children && <Icon name="chevron-right" className="h-3 w-3 rotate-90 opacity-60" />}
+                  {item.children && <Icon name="chevron-right" className="h-3 w-3 rotate-90 opacity-50" />}
                 </Link>
                 <AnimatePresence>
                   {item.children && openMenu === item.label && (
@@ -110,7 +110,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/media#live"
-              className="hidden items-center gap-2 rounded-full bg-red-600/90 px-4 py-2 text-xs font-semibold text-white shadow-lg transition hover:bg-red-500 sm:flex"
+              className="hidden items-center gap-2 rounded-full bg-red-600/90 px-4 py-2 text-xs font-semibold text-white shadow-lg transition hover:bg-red-500 xl:flex"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/80" />
@@ -126,7 +126,7 @@ export function Navbar() {
             </Link>
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex h-11 w-11 items-center justify-center rounded-full ring-gold text-cream xl:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-full ring-gold text-cream lg:hidden"
               aria-label="Toggle menu"
               aria-expanded={open}
             >
@@ -143,7 +143,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-navy-950/97 backdrop-blur-xl xl:hidden"
+            className="fixed inset-0 z-40 bg-navy-950/97 backdrop-blur-xl lg:hidden"
           >
             <div className="container-x flex h-full flex-col overflow-y-auto pt-24 pb-28">
               <div className="flex flex-col divide-y divide-gold-500/10">
@@ -153,15 +153,30 @@ export function Navbar() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.04 * i }}
+                    className="py-3"
                   >
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-between py-4 font-display text-2xl text-cream"
+                      className="flex items-center justify-between py-1 font-display text-2xl text-cream"
                     >
                       {item.label}
                       <Icon name="arrow-up-right" className="h-5 w-5 text-gold-400" />
                     </Link>
+                    {item.children && (
+                      <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2 pl-1">
+                        {item.children.map((c) => (
+                          <Link
+                            key={c.href}
+                            href={c.href}
+                            onClick={() => setOpen(false)}
+                            className="text-sm text-cream/55 transition hover:text-gold-300"
+                          >
+                            {c.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>

@@ -7,11 +7,11 @@ import { Icon } from "@/components/ui/Icon";
 
 export function Welcome() {
   return (
-    <Section tone="navy" className="overflow-hidden">
+    <Section tone="cream" className="overflow-hidden">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal direction="right">
           <div className="relative">
-            <div className="relative aspect-[4/5] max-w-md overflow-hidden rounded-[2rem] ring-1 ring-gold-500/20">
+            <div className="relative aspect-[4/5] max-w-md overflow-hidden rounded-[2rem] ring-1 ring-navy-900/10 shadow-2xl">
               <Image
                 src="/images/site/welcome-handshake.jpg"
                 alt="Our Resident Pastor welcomes you"
@@ -19,26 +19,26 @@ export function Welcome() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent" />
             </div>
             {/* Floating quote card */}
-            <div className="glass absolute -bottom-6 -right-4 max-w-xs rounded-2xl p-5 shadow-2xl sm:-right-8">
+            <div className="absolute -bottom-6 -right-4 max-w-xs rounded-2xl bg-navy-900 p-5 shadow-2xl ring-1 ring-gold-500/20 sm:-right-8">
               <Icon name="quote" className="h-6 w-6 text-gold-400" />
-              <p className="mt-2 text-sm italic leading-relaxed text-cream/80">
+              <p className="mt-2 text-sm italic leading-relaxed text-cream/90">
                 &ldquo;I rejoiced with those who said to me, let us go to the house of the LORD.&rdquo;
               </p>
               <p className="mt-2 text-xs font-semibold text-gold-300">Psalm 122:1</p>
             </div>
-            <div className="pointer-events-none absolute -left-6 -top-6 h-24 w-24 rounded-full bg-gold-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute -left-6 -top-6 h-24 w-24 rounded-full bg-gold-500/25 blur-3xl" />
           </div>
         </Reveal>
 
         <Reveal direction="left">
           <Eyebrow>A Personal Welcome</Eyebrow>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl md:text-5xl">
             You are <span className="text-gold-gradient">welcome</span> here
           </h2>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-cream/70">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-navy-700/85">
             <p>
               On behalf of the entire Winners Chapel International Southport family, it is my
               joy to welcome you. Whether you are searching, hurting, celebrating, or simply
@@ -52,11 +52,11 @@ export function Welcome() {
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button href="/our-pastor" icon="user-check">Read Full Welcome</Button>
-            <Button href="/media#live" variant="outline" icon="play">Watch Video Greeting</Button>
+            <Button href="/media#live" variant="outlineDark" icon="play">Watch Video Greeting</Button>
           </div>
-          <div className="mt-8 border-t border-gold-500/10 pt-6">
-            <p className="font-display text-xl text-cream">The Resident Pastor</p>
-            <p className="text-sm text-cream/50">Winners Chapel International, Southport</p>
+          <div className="mt-8 border-t border-navy-900/10 pt-6">
+            <p className="font-display text-xl text-navy-900">The Resident Pastor</p>
+            <p className="text-sm text-navy-600/70">Winners Chapel International, Southport</p>
           </div>
         </Reveal>
       </div>

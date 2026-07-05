@@ -293,15 +293,16 @@ export default function FirstTimersPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="darker">
+      <Section tone="cream">
         <SectionHeading
+          light
           eyebrow="Questions?"
           title="First timer FAQs"
           subtitle="Still wondering about something? These are the questions we hear most."
         />
         <div className="mx-auto mt-12 max-w-3xl">
           <Reveal>
-            <Accordion items={faqs} />
+            <Accordion items={faqs} light />
           </Reveal>
         </div>
       </Section>

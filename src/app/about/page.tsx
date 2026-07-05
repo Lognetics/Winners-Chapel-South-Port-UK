@@ -127,14 +127,14 @@ export default function AboutPage() {
       </Section>
 
       {/* Statement of Faith */}
-      <Section id="faith" tone="darker">
+      <Section id="faith" tone="cream">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <Reveal direction="right" className="lg:sticky lg:top-28 lg:self-start">
-            <SectionHeading align="left" eyebrow="What We Believe" title={<>Our statement of <span className="text-gold-gradient">faith</span></>} subtitle="The core convictions that anchor our worship, teaching and life together." />
+            <SectionHeading light align="left" eyebrow="What We Believe" title={<>Our statement of <span className="text-gold-gradient">faith</span></>} subtitle="The core convictions that anchor our worship, teaching and life together." />
             <Button href="/first-timers" className="mt-8" icon="church">Come and See</Button>
           </Reveal>
           <Reveal direction="left">
-            <Accordion items={faith} />
+            <Accordion items={faith} light />
           </Reveal>
         </div>
       </Section>

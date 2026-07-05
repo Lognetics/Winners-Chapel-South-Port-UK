@@ -302,15 +302,16 @@ export default function GivingPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="navy">
+      <Section tone="cream">
         <SectionHeading
+          light
           eyebrow="Giving FAQs"
           title="Your questions, answered"
           subtitle="Everything you need to know about giving, Gift Aid and security."
         />
         <div className="mx-auto mt-12 max-w-3xl">
           <Reveal>
-            <Accordion items={faqs} />
+            <Accordion items={faqs} light />
           </Reveal>
         </div>
       </Section>
