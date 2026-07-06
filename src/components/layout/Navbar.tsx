@@ -54,7 +54,7 @@ export function Navbar() {
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-ivory/90 backdrop-blur-xl shadow-[0_10px_40px_-24px_rgba(12,21,51,0.5)] ring-1 ring-navy-900/5"
-            : "bg-transparent"
+            : "bg-gradient-to-b from-navy-950 via-navy-950/70 to-transparent"
         }`}
       >
         <nav className="container-x flex h-18 items-center justify-between py-3">
