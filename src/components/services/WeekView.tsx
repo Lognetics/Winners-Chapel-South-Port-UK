@@ -85,13 +85,13 @@ export function WeekView() {
             key={d.day}
             onClick={() => setActive(i)}
             className={`relative rounded-full px-5 py-2.5 text-sm font-medium transition ${
-              active === i ? "text-navy-950" : "text-cream/60 hover:text-cream"
+              active === i ? "text-navy-950" : "text-navy-600 hover:text-navy-900"
             }`}
           >
             {active === i && (
               <motion.span
                 layoutId="week-pill"
-                className="absolute inset-0 rounded-full bg-gradient-to-b from-gold-300 to-gold-500 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
+                className="absolute inset-0 rounded-full bg-gold-500 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
                 transition={{ type: "spring", stiffness: 400, damping: 34 }}
               />
             )}
@@ -110,38 +110,38 @@ export function WeekView() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="mb-6 flex items-center justify-between gap-4">
-              <h3 className="font-display text-2xl font-semibold text-cream sm:text-3xl">
+              <h3 className="font-display text-2xl font-semibold text-navy-900 sm:text-3xl">
                 {day.day}
               </h3>
               {active === todayIdx && (
-                <span className="rounded-full bg-gold-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/25">
+                <span className="rounded-full bg-gold-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold-700 ring-1 ring-gold-500/25">
                   Today
                 </span>
               )}
             </div>
-            <p className="mb-6 text-sm italic text-cream/55">{day.note}</p>
+            <p className="mb-6 text-sm italic text-navy-600/80">{day.note}</p>
 
             <div className="space-y-3">
               {day.items.map((a) => (
                 <div
                   key={a.title}
-                  className="card-lift flex items-start gap-4 rounded-2xl bg-navy-900/40 p-5 ring-1 ring-gold-500/10"
+                  className="card-light flex items-start gap-4 rounded-2xl p-5"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/15">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={a.icon} className="h-5 w-5" />
                   </span>
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3">
-                      <span className="font-display text-lg font-medium text-cream">{a.title}</span>
+                      <span className="font-display text-lg font-medium text-navy-900">{a.title}</span>
                       {a.tag && (
-                        <span className="rounded-full bg-navy-950/60 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/15">
+                        <span className="rounded-full bg-navy-900/5 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-700 ring-1 ring-navy-900/10">
                           {a.tag}
                         </span>
                       )}
                     </div>
-                    <p className="mt-1 text-sm leading-relaxed text-cream/60">{a.desc}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-navy-600/80">{a.desc}</p>
                   </div>
-                  <span className="shrink-0 text-sm font-semibold tabular-nums text-gold-300">
+                  <span className="shrink-0 text-sm font-semibold tabular-nums text-gold-700">
                     {a.time}
                   </span>
                 </div>

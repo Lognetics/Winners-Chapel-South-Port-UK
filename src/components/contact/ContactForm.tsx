@@ -10,17 +10,17 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="glass rounded-2xl p-8 text-center sm:p-10">
-        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30">
+      <div className="bg-white ring-1 ring-navy-900/10 shadow-xl rounded-2xl p-8 text-center sm:p-10">
+        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
           <Icon name="check" className="h-8 w-8" />
         </span>
-        <p className="mt-6 font-display text-2xl text-cream">Message sent!</p>
-        <p className="mt-3 text-cream/60">
+        <p className="mt-6 font-display text-2xl text-navy-900">Message sent!</p>
+        <p className="mt-3 text-navy-600/80">
           Thank you for reaching out. A member of our team will be in touch with you shortly.
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="mt-6 text-sm font-semibold text-gold-300 link-underline"
+          className="mt-6 text-sm font-semibold text-gold-700 link-underline"
         >
           Send another message
         </button>

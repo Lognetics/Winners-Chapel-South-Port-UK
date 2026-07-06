@@ -10,20 +10,20 @@ export function TestimonyForm() {
 
   if (submitted) {
     return (
-      <div className="flex h-full flex-col items-center justify-center rounded-3xl bg-gradient-to-b from-gold-500/15 to-navy-950 p-10 text-center ring-1 ring-gold-500/25">
-        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/20 text-gold-300 ring-1 ring-gold-500/30">
+      <div className="flex h-full flex-col items-center justify-center rounded-3xl bg-white p-10 text-center ring-1 ring-navy-900/10 shadow-xl">
+        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/30">
           <Icon name="check" className="h-8 w-8" strokeWidth={2.5} />
         </span>
-        <h3 className="mt-6 font-display text-2xl font-semibold text-cream">
+        <h3 className="mt-6 font-display text-2xl font-semibold text-navy-900">
           Glory to God!
         </h3>
-        <p className="mt-3 max-w-sm text-sm leading-relaxed text-cream/65">
+        <p className="mt-3 max-w-sm text-sm leading-relaxed text-navy-600/80">
           Thank you for sharing what the Lord has done. Our media team will
           reach out to you before we publish your testimony.
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="mt-6 text-sm font-medium text-gold-300 link-underline"
+          className="mt-6 text-sm font-medium text-gold-700 link-underline"
         >
           Share another testimony
         </button>
@@ -37,12 +37,12 @@ export function TestimonyForm() {
         e.preventDefault();
         setSubmitted(true);
       }}
-      className="rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10 sm:p-10"
+      className="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-navy-900/10 sm:p-10"
     >
-      <h3 className="font-display text-2xl font-semibold text-cream">
+      <h3 className="font-display text-2xl font-semibold text-navy-900">
         Submit your <span className="text-gold-gradient">testimony</span>
       </h3>
-      <p className="mt-2 text-sm text-cream/60">
+      <p className="mt-2 text-sm text-navy-600/80">
         Your story could be the miracle someone else is waiting to hear.
       </p>
       <div className="mt-6 grid gap-5">

@@ -110,9 +110,9 @@ const faqs = [
 ];
 
 const levelTone: Record<string, string> = {
-  Foundation: "text-emerald-300",
-  Intermediate: "text-gold-300",
-  Advanced: "text-rose-300",
+  Foundation: "text-emerald-700",
+  Intermediate: "text-gold-700",
+  Advanced: "text-rose-700",
 };
 
 export default function WofbiPage() {
@@ -154,7 +154,7 @@ export default function WofbiPage() {
                   </>
                 }
               />
-              <div className="mt-6 space-y-4 text-cream/70">
+              <div className="mt-6 space-y-4 text-navy-600/80">
                 <p className="leading-relaxed">
                   The Word of Faith Bible Institute is the discipleship and
                   leadership training arm of Winners Chapel International. Founded
@@ -180,11 +180,11 @@ export default function WofbiPage() {
           <div className="grid grid-cols-2 gap-5">
             {introStats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.08}>
-                <div className="glass rounded-3xl p-8 text-center ring-1 ring-gold-500/10">
-                  <p className="font-display text-4xl font-bold text-gold-300 sm:text-5xl">
+                <div className="bg-white shadow-xl rounded-3xl p-8 text-center ring-1 ring-navy-900/10">
+                  <p className="font-display text-4xl font-bold text-gold-700 sm:text-5xl">
                     <CountUp to={s.to} suffix={s.suffix} />
                   </p>
-                  <p className="mt-2 text-sm text-cream/60">{s.label}</p>
+                  <p className="mt-2 text-sm text-navy-600/80">{s.label}</p>
                 </div>
               </Reveal>
             ))}
@@ -206,42 +206,42 @@ export default function WofbiPage() {
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {wofbiCourses.map((c, i) => (
             <Reveal key={c.code} delay={i * 0.1}>
-              <article className="card-lift group flex h-full flex-col rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-8 ring-1 ring-gold-500/10">
+              <article className="card-light group flex h-full flex-col rounded-3xl p-8">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/10 font-display text-xl font-bold text-gold-300 ring-1 ring-gold-500/25">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/15 font-display text-xl font-bold text-gold-700 ring-1 ring-gold-500/25">
                     {c.code}
                   </span>
                   <span
-                    className={`rounded-full bg-navy-900/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider ring-1 ring-gold-500/15 ${
-                      levelTone[c.level] ?? "text-gold-300"
+                    className={`rounded-full bg-navy-900/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider ring-1 ring-navy-900/10 ${
+                      levelTone[c.level] ?? "text-gold-700"
                     }`}
                   >
                     {c.level}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-xl font-semibold text-cream">
+                <h3 className="mt-6 font-display text-xl font-semibold text-navy-900">
                   {c.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/60">
+                <p className="mt-2 text-sm leading-relaxed text-navy-600/80">
                   {c.desc}
                 </p>
-                <p className="mt-4 inline-flex items-center gap-2 text-sm text-gold-400">
+                <p className="mt-4 inline-flex items-center gap-2 text-sm text-gold-600">
                   <Icon name="clock" className="h-4 w-4" /> {c.weeks}
                 </p>
 
-                <div className="mt-6 border-t border-gold-500/10 pt-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-cream/45">
+                <div className="mt-6 border-t border-navy-900/10 pt-5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                     Sample outline
                   </p>
                   <ul className="mt-3 space-y-2">
                     {outlines[c.code].map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-start gap-2.5 text-sm text-cream/70"
+                        className="flex items-start gap-2.5 text-sm text-navy-600/80"
                       >
                         <Icon
                           name="check"
-                          className="mt-0.5 h-4 w-4 shrink-0 text-gold-400"
+                          className="mt-0.5 h-4 w-4 shrink-0 text-gold-600"
                           strokeWidth={2.5}
                         />
                         {topic}
@@ -286,14 +286,14 @@ export default function WofbiPage() {
 
           <div className="grid gap-6">
             <Reveal>
-              <div className="rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-8 ring-1 ring-gold-500/10">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+              <div className="rounded-3xl bg-white p-8 ring-1 ring-navy-900/10 shadow-xl">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name="user-check" className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl font-semibold text-cream">
+                <h3 className="mt-5 font-display text-xl font-semibold text-navy-900">
                   Student Portal
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/60">
+                <p className="mt-2 text-sm leading-relaxed text-navy-600/80">
                   Access your classes, materials, assignments and results in one
                   place. The portal is coming soon for enrolled students.
                 </p>
@@ -301,7 +301,7 @@ export default function WofbiPage() {
                   <Button href="#" variant="outline" size="sm" iconRight="arrow-right">
                     Student Login
                   </Button>
-                  <p className="mt-3 text-xs text-cream/40">
+                  <p className="mt-3 text-xs text-navy-600/80">
                     Portal launching soon — you&apos;ll receive login details
                     after enrolment.
                   </p>
@@ -310,23 +310,23 @@ export default function WofbiPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10">
-                <h3 className="font-display text-xl font-semibold text-cream">
+              <div className="rounded-3xl bg-white p-8 ring-1 ring-navy-900/10 shadow-xl">
+                <h3 className="font-display text-xl font-semibold text-navy-900">
                   Upcoming Classes
                 </h3>
-                <div className="mt-5 divide-y divide-gold-500/10">
+                <div className="mt-5 divide-y divide-navy-900/10">
                   {upcomingClasses.map((c) => (
                     <div
                       key={c.title}
                       className="flex items-center gap-4 py-3.5"
                     >
-                      <span className="w-16 shrink-0 text-xs font-semibold uppercase tracking-wider text-gold-400">
+                      <span className="w-16 shrink-0 text-xs font-semibold uppercase tracking-wider text-gold-600">
                         {c.date}
                       </span>
-                      <span className="min-w-0 flex-1 truncate text-sm text-cream/80">
+                      <span className="min-w-0 flex-1 truncate text-sm text-navy-800">
                         {c.title}
                       </span>
-                      <span className="shrink-0 text-xs text-cream/50">
+                      <span className="shrink-0 text-xs text-navy-600/80">
                         {c.time}
                       </span>
                     </div>
@@ -351,14 +351,14 @@ export default function WofbiPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {iconCards.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.08}>
-              <div className="card-lift group flex h-full flex-col rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500/20">
+              <div className="card-light group flex h-full flex-col rounded-3xl p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500/25">
                   <Icon name={c.icon} className="h-7 w-7" />
                 </span>
-                <h3 className="mt-6 font-display text-xl font-semibold text-cream">
+                <h3 className="mt-6 font-display text-xl font-semibold text-navy-900">
                   {c.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/60">
+                <p className="mt-2 text-sm leading-relaxed text-navy-600/80">
                   {c.desc}
                 </p>
               </div>
@@ -374,7 +374,7 @@ export default function WofbiPage() {
             <div className="absolute inset-0 hero-glow" />
             <div className="relative z-10 grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
               <div>
-                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
                   <span className="h-px w-6 bg-gold-500/60" /> Scholarships
                 </span>
                 <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
@@ -392,7 +392,7 @@ export default function WofbiPage() {
                 <Button href="/contact" icon="hand-heart" className="w-full">
                   Apply for a Scholarship
                 </Button>
-                <Button href="/contact" variant="outline" className="w-full">
+                <Button href="/contact" variant="outlineLight" className="w-full">
                   Ask a Question
                 </Button>
               </div>
@@ -415,7 +415,7 @@ export default function WofbiPage() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {faculty.map((f, i) => (
             <Reveal key={f.name} delay={i * 0.07}>
-              <article className="card-lift group overflow-hidden rounded-3xl bg-navy-900/50 ring-1 ring-gold-500/10">
+              <article className="card-light group overflow-hidden rounded-3xl">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
                     src="/images/site/welcome-handshake.jpg"
@@ -427,10 +427,10 @@ export default function WofbiPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-lg font-semibold text-cream">
+                  <h3 className="font-display text-lg font-semibold text-navy-900">
                     {f.name}
                   </h3>
-                  <p className="mt-1 text-sm text-gold-400">{f.subject}</p>
+                  <p className="mt-1 text-sm text-gold-600">{f.subject}</p>
                 </div>
               </article>
             </Reveal>
@@ -459,7 +459,7 @@ export default function WofbiPage() {
           ].map((src, i) => (
             <Reveal key={src + i} delay={i * 0.06}>
               <figure
-                className={`group relative overflow-hidden rounded-2xl ring-1 ring-gold-500/10 ${
+                className={`group relative overflow-hidden rounded-2xl ring-1 ring-navy-900/10 ${
                   i === 0 ? "col-span-2 aspect-[16/9] md:col-span-2" : "aspect-[4/3]"
                 }`}
               >
@@ -504,7 +504,7 @@ export default function WofbiPage() {
         <div className="absolute inset-0 hero-glow" />
         <div className="container-x relative z-10 py-24 text-center sm:py-32">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> Your Journey Begins
             </span>
             <h2 className="mx-auto mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight text-cream sm:text-5xl">

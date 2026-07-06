@@ -24,10 +24,10 @@ export function Sermons() {
           subtitle="Be transformed by the renewing of your mind. Watch, listen and download life-changing messages."
         />
         <div className="flex items-center gap-3">
-          <button onClick={() => scroll(-1)} aria-label="Previous" className="flex h-11 w-11 items-center justify-center rounded-full ring-gold text-cream transition hover:bg-gold-500/10">
+          <button onClick={() => scroll(-1)} aria-label="Previous" className="flex h-11 w-11 items-center justify-center rounded-full border border-navy-900/15 text-navy-800 transition hover:bg-navy-900/5 hover:border-gold-500">
             <Icon name="chevron-right" className="h-5 w-5 rotate-180" />
           </button>
-          <button onClick={() => scroll(1)} aria-label="Next" className="flex h-11 w-11 items-center justify-center rounded-full ring-gold text-cream transition hover:bg-gold-500/10">
+          <button onClick={() => scroll(1)} aria-label="Next" className="flex h-11 w-11 items-center justify-center rounded-full border border-navy-900/15 text-navy-800 transition hover:bg-navy-900/5 hover:border-gold-500">
             <Icon name="chevron-right" className="h-5 w-5" />
           </button>
         </div>
@@ -40,11 +40,11 @@ export function Sermons() {
         {sermons.map((s) => (
           <article
             key={s.title}
-            className="card-lift group relative w-[300px] shrink-0 snap-start overflow-hidden rounded-3xl bg-navy-900/50 ring-1 ring-gold-500/10 sm:w-[340px]"
+            className="card-light group relative w-[300px] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-[340px]"
           >
             <div className="relative aspect-video overflow-hidden">
               <Image src={s.img} alt={s.title} fill sizes="340px" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
               <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-navy-950">
                 {s.tag}
               </span>
@@ -58,12 +58,12 @@ export function Sermons() {
               </button>
             </div>
             <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gold-400">{s.series} · {s.date}</p>
-              <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-cream">{s.title}</h3>
-              <p className="mt-1 text-sm text-cream/50">{s.speaker}</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold-700">{s.series} · {s.date}</p>
+              <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-navy-900">{s.title}</h3>
+              <p className="mt-1 text-sm text-navy-500">{s.speaker}</p>
               <div className="mt-4 flex items-center gap-4 text-xs">
-                <button className="flex items-center gap-1.5 text-cream/70 transition hover:text-gold-300"><Icon name="download" className="h-4 w-4" /> MP3</button>
-                <button className="flex items-center gap-1.5 text-cream/70 transition hover:text-gold-300"><Icon name="pen-line" className="h-4 w-4" /> Notes</button>
+                <button className="flex items-center gap-1.5 text-navy-600 transition hover:text-gold-700"><Icon name="download" className="h-4 w-4" /> MP3</button>
+                <button className="flex items-center gap-1.5 text-navy-600 transition hover:text-gold-700"><Icon name="pen-line" className="h-4 w-4" /> Notes</button>
               </div>
             </div>
           </article>

@@ -25,13 +25,13 @@ export function PrayerWall() {
     <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6 [&>*]:break-inside-avoid">
       {items.map((item, i) => (
         <Reveal key={i} delay={(i % 3) * 0.08}>
-          <div className="glass card-lift rounded-2xl p-6">
-            <span className="inline-flex items-center rounded-full bg-gold-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/20">
+          <div className="card-lift bg-white ring-1 ring-navy-900/10 rounded-2xl p-6">
+            <span className="inline-flex items-center rounded-full bg-gold-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold-700 ring-1 ring-gold-500/25">
               {item.category}
             </span>
-            <p className="mt-4 text-[15px] leading-relaxed text-cream/80">{item.text}</p>
-            <div className="mt-5 flex items-center justify-between border-t border-gold-500/10 pt-4">
-              <span className="text-xs text-cream/45">
+            <p className="mt-4 text-[15px] leading-relaxed text-navy-700">{item.text}</p>
+            <div className="mt-5 flex items-center justify-between border-t border-navy-900/10 pt-4">
+              <span className="text-xs text-navy-600/80">
                 {item.count.toLocaleString()} praying
               </span>
               <button
@@ -44,8 +44,8 @@ export function PrayerWall() {
                 }}
                 className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold transition ${
                   prayed[i]
-                    ? "bg-gold-500/15 text-gold-300"
-                    : "ring-gold text-cream/80 hover:bg-gold-500/10 hover:text-gold-300"
+                    ? "bg-gold-500/15 text-gold-700"
+                    : "bg-gold-500/15 text-gold-700 hover:bg-gold-500/25"
                 }`}
               >
                 <span aria-hidden>🙏</span>

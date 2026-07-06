@@ -64,11 +64,11 @@ export default function MinistriesPage() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {featured.map((m, i) => (
             <Reveal key={m.slug} delay={i * 0.08}>
-              <div id={m.slug} className="card-lift flex h-full flex-col gap-4 rounded-3xl bg-gradient-to-b from-navy-800/60 to-navy-950 p-8 ring-1 ring-gold-500/10">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20"><Icon name={m.icon} className="h-7 w-7" /></span>
-                <h3 className="font-display text-xl font-semibold text-cream">{m.name}</h3>
-                <p className="flex-1 text-sm leading-relaxed text-cream/60">{m.desc}</p>
-                <a href="#join" className="flex items-center gap-1.5 text-sm font-semibold text-gold-300 hover:text-gold-200">Join this team <Icon name="arrow-right" className="h-4 w-4" /></a>
+              <div id={m.slug} className="card-light flex h-full flex-col gap-4 rounded-3xl p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25"><Icon name={m.icon} className="h-7 w-7" /></span>
+                <h3 className="font-display text-xl font-semibold text-navy-900">{m.name}</h3>
+                <p className="flex-1 text-sm leading-relaxed text-navy-600/80">{m.desc}</p>
+                <a href="#join" className="flex items-center gap-1.5 text-sm font-semibold text-gold-700 hover:text-gold-600">Join this team <Icon name="arrow-right" className="h-4 w-4" /></a>
               </div>
             </Reveal>
           ))}
@@ -81,10 +81,10 @@ export default function MinistriesPage() {
         <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {rest.map((m, i) => (
             <Reveal key={m.slug} delay={(i % 4) * 0.04}>
-              <a id={m.slug} href="#join" className="card-lift group flex h-full flex-col gap-3 rounded-2xl bg-navy-900/40 p-5 ring-1 ring-gold-500/10">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/15 transition group-hover:bg-gold-500/20"><Icon name={m.icon} className="h-5 w-5" /></span>
-                <span className="text-sm font-semibold text-cream">{m.name}</span>
-                <span className="text-xs leading-relaxed text-cream/50">{m.desc}</span>
+              <a id={m.slug} href="#join" className="card-light group flex h-full flex-col gap-3 rounded-2xl p-5">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500/25"><Icon name={m.icon} className="h-5 w-5" /></span>
+                <span className="text-sm font-semibold text-navy-900">{m.name}</span>
+                <span className="text-xs leading-relaxed text-navy-600/80">{m.desc}</span>
               </a>
             </Reveal>
           ))}
@@ -103,11 +103,11 @@ export default function MinistriesPage() {
             </Reveal>
             <Reveal direction={s.reverse ? "right" : "left"} className={s.reverse ? "lg:order-1" : ""}>
               <SectionHeading align="left" eyebrow="Spotlight" title={s.name} />
-              <p className="mt-5 text-base leading-relaxed text-cream/70">{s.text}</p>
+              <p className="mt-5 text-base leading-relaxed text-navy-600/80">{s.text}</p>
               <ul className="mt-6 space-y-3">
                 {s.points.map((p) => (
-                  <li key={p} className="flex items-center gap-3 text-sm text-cream/80">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold-500/15 text-gold-300"><Icon name="check" className="h-3.5 w-3.5" strokeWidth={2.5} /></span>{p}
+                  <li key={p} className="flex items-center gap-3 text-sm text-navy-800">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold-500/15 text-gold-700"><Icon name="check" className="h-3.5 w-3.5" strokeWidth={2.5} /></span>{p}
                   </li>
                 ))}
               </ul>
@@ -123,9 +123,9 @@ export default function MinistriesPage() {
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {offers.map((o, i) => (
             <Reveal key={o.label} delay={(i % 6) * 0.04}>
-              <div className="flex flex-col items-center gap-3 rounded-2xl bg-navy-900/40 p-6 text-center ring-1 ring-gold-500/10">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20"><Icon name={o.icon} className="h-6 w-6" /></span>
-                <span className="text-sm font-medium text-cream/80">{o.label}</span>
+              <div className="card-light flex flex-col items-center gap-3 rounded-2xl p-6 text-center">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25"><Icon name={o.icon} className="h-6 w-6" /></span>
+                <span className="text-sm font-medium text-navy-800">{o.label}</span>
               </div>
             </Reveal>
           ))}
@@ -137,10 +137,10 @@ export default function MinistriesPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal direction="right">
             <SectionHeading align="left" eyebrow="Join a Ministry" title={<>Ready to <span className="text-gold-gradient">serve</span>?</>} subtitle="Tell us a little about you and the team you're drawn to. We'll be in touch to welcome you and take the next step together." />
-            <div className="mt-8 space-y-3 text-sm text-cream/70">
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />No experience necessary — just a willing heart</p>
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />Full training and support provided</p>
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />Grow, belong and make an eternal impact</p>
+            <div className="mt-8 space-y-3 text-sm text-navy-600/80">
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />No experience necessary — just a willing heart</p>
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />Full training and support provided</p>
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />Grow, belong and make an eternal impact</p>
             </div>
           </Reveal>
           <Reveal direction="left">

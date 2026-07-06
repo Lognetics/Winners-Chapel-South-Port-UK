@@ -107,28 +107,28 @@ export default function GivingPage() {
       <Section tone="navy">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> A Cheerful Giver
             </span>
-            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
               God loves a{" "}
               <span className="text-gold-gradient">cheerful giver</span>.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-cream/70">
+            <p className="mt-6 text-lg leading-relaxed text-navy-600/80">
               &ldquo;Every man according as he purposeth in his heart, so let him give; not
               grudgingly, or of necessity: for God loveth a cheerful giver.&rdquo; When you give,
               you&apos;re not just funding a budget — you&apos;re sowing into changed lives, a
               transformed community, and the advance of the Kingdom.
             </p>
-            <p className="mt-4 text-sm font-medium uppercase tracking-wider text-gold-400/80">
+            <p className="mt-4 text-sm font-medium uppercase tracking-wider text-gold-700">
               2 Corinthians 9:7
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               {trust.map((t) => (
-                <span key={t.label} className="inline-flex items-center gap-2 text-sm text-cream/60">
-                  <Icon name={t.icon} className="h-4 w-4 text-gold-400" /> {t.label}
+                <span key={t.label} className="inline-flex items-center gap-2 text-sm text-navy-600/80">
+                  <Icon name={t.icon} className="h-4 w-4 text-gold-600" /> {t.label}
                 </span>
               ))}
             </div>
@@ -153,19 +153,19 @@ export default function GivingPage() {
                 { icon: "trending-up", t: "One-off or recurring", d: "Give once, weekly or monthly — you're in control." },
               ].map((f) => (
                 <div key={f.t} className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={f.icon} className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="font-medium text-cream">{f.t}</p>
-                    <p className="text-sm text-cream/55">{f.d}</p>
+                    <p className="font-medium text-navy-900">{f.t}</p>
+                    <p className="text-sm text-navy-600/80">{f.d}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <Reveal delay={0.1}>
-            <div className="glass rounded-2xl p-6 sm:p-8">
+            <div className="bg-white shadow-xl ring-1 ring-navy-900/10 rounded-2xl p-6 sm:p-8">
               <GiveForm />
             </div>
           </Reveal>
@@ -182,12 +182,12 @@ export default function GivingPage() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ways.map((w, i) => (
             <Reveal key={w.title} delay={(i % 3) * 0.08}>
-              <div className="card-lift h-full rounded-2xl bg-navy-900/40 p-7 ring-1 ring-gold-500/10">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+              <div className="card-lift h-full rounded-2xl bg-white p-7 ring-1 ring-navy-900/10">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name={w.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl text-cream">{w.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream/60">{w.body}</p>
+                <h3 className="mt-5 font-display text-xl text-navy-900">{w.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-navy-600/80">{w.body}</p>
               </div>
             </Reveal>
           ))}
@@ -215,28 +215,28 @@ export default function GivingPage() {
                 "One simple declaration covers all your future and past gifts (up to 4 years).",
               ].map((line) => (
                 <div key={line} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-300">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700">
                     <Icon name="check" className="h-3.5 w-3.5" />
                   </span>
-                  <p className="text-sm leading-relaxed text-cream/65">{line}</p>
+                  <p className="text-sm leading-relaxed text-navy-600/80">{line}</p>
                 </div>
               ))}
             </div>
           </div>
           <Reveal delay={0.1}>
-            <div className="glass rounded-2xl p-8">
+            <div className="bg-white shadow-xl ring-1 ring-navy-900/10 rounded-2xl p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name="pen-line" className="h-5 w-5" />
                 </span>
-                <h3 className="font-display text-xl text-cream">Gift Aid Declaration</h3>
+                <h3 className="font-display text-xl text-navy-900">Gift Aid Declaration</h3>
               </div>
-              <p className="mt-5 text-sm leading-relaxed text-cream/65">
+              <p className="mt-5 text-sm leading-relaxed text-navy-600/80">
                 Simply tick the Gift Aid box when you give online, and we&apos;ll do the rest. Prefer
                 a paper declaration? Our team will gladly provide one — just ask at the welcome desk
                 or get in touch.
               </p>
-              <p className="mt-5 rounded-xl bg-navy-900/50 p-4 text-xs leading-relaxed text-cream/50 ring-1 ring-gold-500/10">
+              <p className="mt-5 rounded-xl bg-navy-900/5 p-4 text-xs leading-relaxed text-navy-600/80 ring-1 ring-navy-900/10">
                 By making a Gift Aid declaration you confirm you are a UK taxpayer and understand
                 that if you pay less Income/Capital Gains Tax than the amount of Gift Aid claimed on
                 all your donations in that tax year, it is your responsibility to pay any difference.
@@ -261,15 +261,15 @@ export default function GivingPage() {
             <Reveal key={a.label} delay={i * 0.1}>
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-3 font-display text-lg text-cream">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="inline-flex items-center gap-3 font-display text-lg text-navy-900">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                       <Icon name={a.icon} className="h-4 w-4" />
                     </span>
                     {a.label}
                   </span>
                   <span className="font-display text-2xl text-gold-gradient">{a.pct}%</span>
                 </div>
-                <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-navy-900/70 ring-1 ring-gold-500/10">
+                <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-navy-900/5 ring-1 ring-navy-900/10">
                   <div
                     className="h-full rounded-full bg-gradient-to-r from-gold-500 to-gold-300"
                     style={{ width: `${a.pct}%` }}
@@ -284,13 +284,13 @@ export default function GivingPage() {
       {/* Tax info note */}
       <Section tone="darker">
         <Reveal>
-          <div className="mx-auto flex max-w-3xl items-start gap-4 rounded-2xl bg-navy-900/40 p-6 ring-1 ring-gold-500/10 sm:p-8">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+          <div className="mx-auto flex max-w-3xl items-start gap-4 rounded-2xl bg-white p-6 ring-1 ring-navy-900/10 sm:p-8">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
               <Icon name="shield-check" className="h-5 w-5" />
             </span>
             <div>
-              <h3 className="font-display text-lg text-cream">Tax Information</h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream/60">
+              <h3 className="font-display text-lg text-navy-900">Tax Information</h3>
+              <p className="mt-2 text-sm leading-relaxed text-navy-600/80">
                 Winners Chapel International, Southport is committed to the highest standards of
                 financial accountability. Annual giving statements are available on request for your
                 tax records. For questions about Gift Aid or tax-efficient giving, please contact our
@@ -319,12 +319,12 @@ export default function GivingPage() {
       {/* Closing CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/80 to-navy-950 p-10 text-center ring-1 ring-gold-500/20 sm:p-16 hero-glow">
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-cream sm:text-4xl">
+          <div className="relative overflow-hidden rounded-3xl bg-white shadow-xl p-10 text-center ring-1 ring-navy-900/10 sm:p-16">
+            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
               Sow into something that{" "}
               <span className="text-gold-gradient">lasts forever</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-cream/65">
+            <p className="mx-auto mt-5 max-w-xl text-navy-600/80">
               Thank you for partnering with us. Together, we&apos;re changing Southport and reaching
               the world with the Word of Faith.
             </p>

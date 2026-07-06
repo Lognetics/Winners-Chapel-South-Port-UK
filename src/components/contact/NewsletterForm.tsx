@@ -9,7 +9,7 @@ export function NewsletterForm() {
 
   if (submitted) {
     return (
-      <p className="font-display text-xl text-cream">
+      <p className="font-display text-xl text-navy-900">
         You&apos;re subscribed. Watch your inbox for encouragement and updates.
       </p>
     );

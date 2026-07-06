@@ -196,18 +196,18 @@ export default function MediaPage() {
           <div className="grid gap-4">
             {liveTeasers.map((t, i) => (
               <Reveal key={t.title} delay={i * 0.08}>
-                <div className="card-lift group flex h-full items-start gap-4 rounded-2xl bg-navy-900/50 p-6 ring-1 ring-gold-500/10">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500/20">
+                <div className="card-light group flex h-full items-start gap-4 rounded-2xl p-6">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500/25">
                     <Icon name={t.icon} className="h-6 w-6" />
                   </span>
                   <div>
-                    <h4 className="font-display text-lg font-semibold text-cream">
+                    <h4 className="font-display text-lg font-semibold text-navy-900">
                       {t.title}
                     </h4>
-                    <p className="mt-1 text-sm leading-relaxed text-cream/60">
+                    <p className="mt-1 text-sm leading-relaxed text-navy-600/80">
                       {t.desc}
                     </p>
-                    <button className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-gold-300 transition hover:text-gold-200">
+                    <button className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-gold-700 transition hover:text-gold-600">
                       {t.cta}
                       <Icon name="arrow-right" className="h-4 w-4" />
                     </button>
@@ -252,23 +252,23 @@ export default function MediaPage() {
                 href={p.href}
                 target={p.href.startsWith("http") ? "_blank" : undefined}
                 rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="card-lift group flex h-full flex-col rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10"
+                className="card-light group flex h-full flex-col rounded-3xl p-8"
               >
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500/20">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500/25">
                   {p.brand ? (
                     <BrandIcon name={p.brand} className="h-7 w-7" />
                   ) : (
                     <Icon name={p.icon as string} className="h-7 w-7" />
                   )}
                 </span>
-                <h3 className="mt-6 font-display text-xl font-semibold text-cream">
+                <h3 className="mt-6 font-display text-xl font-semibold text-navy-900">
                   {p.label}
                 </h3>
-                <p className="mt-1 text-sm text-gold-400">{p.handle}</p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/60">
+                <p className="mt-1 text-sm text-gold-600">{p.handle}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600/80">
                   {p.desc}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-gold-300">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-gold-700">
                   Subscribe
                   <Icon
                     name="arrow-up-right"
@@ -296,25 +296,25 @@ export default function MediaPage() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {devotionals.map((d, i) => (
             <Reveal key={d.title} delay={i * 0.06}>
-              <article className="card-lift group flex h-full flex-col rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-7 ring-1 ring-gold-500/10">
+              <article className="card-light group flex h-full flex-col rounded-3xl p-7">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="book-open" className="h-5 w-5" />
                   </span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-cream/45">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                     {d.date}
                   </span>
                 </div>
-                <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-gold-400">
+                <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-gold-600">
                   {d.verse}
                 </p>
-                <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-cream">
+                <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-navy-900">
                   {d.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/60">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600/80">
                   {d.teaser}
                 </p>
-                <button className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-gold-300 transition hover:text-gold-200">
+                <button className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-gold-700 transition hover:text-gold-600">
                   Read devotional
                   <Icon name="arrow-right" className="h-4 w-4" />
                 </button>
@@ -348,27 +348,27 @@ export default function MediaPage() {
             </div>
           </Reveal>
 
-          <div className="divide-y divide-gold-500/10 overflow-hidden rounded-3xl bg-navy-900/40 ring-1 ring-gold-500/10">
+          <div className="divide-y divide-navy-900/10 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-navy-900/10">
             {podcast.map((e) => (
               <div
                 key={e.ep}
-                className="group flex items-center gap-4 px-6 py-5 transition hover:bg-gold-500/[0.04]"
+                className="group flex items-center gap-4 px-6 py-5 transition hover:bg-gold-500/[0.06]"
               >
                 <button
                   aria-label={`Play ${e.title}`}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500 group-hover:text-navy-950"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500 group-hover:text-navy-950"
                 >
                   <Icon name="play" className="ml-0.5 h-5 w-5" strokeWidth={2} />
                 </button>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gold-400">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gold-600">
                     {e.ep} · {e.date}
                   </p>
-                  <h4 className="truncate font-display text-base font-medium text-cream">
+                  <h4 className="truncate font-display text-base font-medium text-navy-900">
                     {e.title}
                   </h4>
                 </div>
-                <span className="shrink-0 text-sm text-cream/50">{e.duration}</span>
+                <span className="shrink-0 text-sm text-navy-600/80">{e.duration}</span>
               </div>
             ))}
           </div>
@@ -404,24 +404,24 @@ export default function MediaPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonies.map((t, i) => (
             <Reveal key={t.name} delay={(i % 3) * 0.08}>
-              <article className="card-lift group flex h-full flex-col rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-7 ring-1 ring-gold-500/10">
+              <article className="card-light group flex h-full flex-col rounded-3xl p-7">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={typeBadge[t.type]} className="h-5 w-5" />
                   </span>
-                  <span className="rounded-full bg-navy-900/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/15">
+                  <span className="rounded-full bg-navy-900/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-700 ring-1 ring-navy-900/10">
                     {t.type}
                   </span>
                 </div>
-                <Icon name="quote" className="mt-6 h-7 w-7 text-gold-500/40" />
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/75">
+                <Icon name="quote" className="mt-6 h-7 w-7 text-gold-500/50" />
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-800">
                   {t.quote}
                 </p>
-                <div className="mt-6 border-t border-gold-500/10 pt-4">
-                  <p className="font-display text-base font-semibold text-cream">
+                <div className="mt-6 border-t border-navy-900/10 pt-4">
+                  <p className="font-display text-base font-semibold text-navy-900">
                     {t.name}
                   </p>
-                  <p className="text-xs uppercase tracking-wider text-gold-400">
+                  <p className="text-xs uppercase tracking-wider text-gold-600">
                     {t.category}
                   </p>
                 </div>
@@ -453,19 +453,19 @@ export default function MediaPage() {
           <div className="grid gap-4">
             {downloads.map((d, i) => (
               <Reveal key={d.title} delay={i * 0.06}>
-                <div className="group flex items-center gap-4 rounded-2xl bg-navy-900/50 p-5 ring-1 ring-gold-500/10 transition hover:ring-gold-400/30">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500 group-hover:text-navy-950">
+                <div className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-navy-900/10 transition hover:ring-gold-500/40">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500 group-hover:text-navy-950">
                     <Icon name="download" className="h-5 w-5" />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h4 className="font-display text-base font-medium text-cream">
+                    <h4 className="font-display text-base font-medium text-navy-900">
                       {d.title}
                     </h4>
-                    <p className="text-xs text-cream/45">{d.size}</p>
+                    <p className="text-xs text-navy-600/80">{d.size}</p>
                   </div>
                   <Icon
                     name="arrow-right"
-                    className="h-5 w-5 shrink-0 text-cream/40 transition group-hover:translate-x-1 group-hover:text-gold-300"
+                    className="h-5 w-5 shrink-0 text-navy-600/80 transition group-hover:translate-x-1 group-hover:text-gold-700"
                   />
                 </div>
               </Reveal>
@@ -479,7 +479,7 @@ export default function MediaPage() {
         <div className="absolute inset-0 hero-glow" />
         <div className="container-x relative z-10 py-24 text-center sm:py-32">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> Never Miss A Moment
             </span>
             <h2 className="mx-auto mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight text-cream sm:text-5xl">
@@ -491,10 +491,10 @@ export default function MediaPage() {
               home, there is a seat and a blessing with your name on it.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Button href="#live" icon="play">
+              <Button href="#live" variant="gold" icon="play">
                 Watch Live
               </Button>
-              <Button href="/first-timers" variant="outline" iconRight="arrow-right">
+              <Button href="/first-timers" variant="outlineLight" iconRight="arrow-right">
                 Plan Your Visit
               </Button>
             </div>

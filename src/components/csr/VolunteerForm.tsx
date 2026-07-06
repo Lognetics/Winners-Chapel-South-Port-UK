@@ -10,20 +10,20 @@ export function VolunteerForm() {
 
   if (submitted) {
     return (
-      <div className="flex h-full flex-col items-center justify-center rounded-3xl bg-gradient-to-b from-gold-500/15 to-navy-950 p-10 text-center ring-1 ring-gold-500/25">
-        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/20 text-gold-300 ring-1 ring-gold-500/30">
+      <div className="flex h-full flex-col items-center justify-center rounded-3xl bg-white p-10 text-center ring-1 ring-navy-900/10 shadow-xl">
+        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
           <Icon name="check" className="h-8 w-8" strokeWidth={2.5} />
         </span>
-        <h3 className="mt-6 font-display text-2xl font-semibold text-cream">
+        <h3 className="mt-6 font-display text-2xl font-semibold text-navy-900">
           Welcome to the team!
         </h3>
-        <p className="mt-3 max-w-sm text-sm leading-relaxed text-cream/65">
+        <p className="mt-3 max-w-sm text-sm leading-relaxed text-navy-600/80">
           Thank you for offering your time and heart. Our community team will be
           in touch with the next volunteer session and how to get started.
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="mt-6 text-sm font-medium text-gold-300 link-underline"
+          className="mt-6 text-sm font-medium text-gold-700 link-underline"
         >
           Register someone else
         </button>
@@ -37,12 +37,12 @@ export function VolunteerForm() {
         e.preventDefault();
         setSubmitted(true);
       }}
-      className="rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10 sm:p-10"
+      className="rounded-3xl bg-white p-8 ring-1 ring-navy-900/10 shadow-xl sm:p-10"
     >
-      <h3 className="font-display text-2xl font-semibold text-cream">
+      <h3 className="font-display text-2xl font-semibold text-navy-900">
         Become a <span className="text-gold-gradient">volunteer</span>
       </h3>
-      <p className="mt-2 text-sm text-cream/60">
+      <p className="mt-2 text-sm text-navy-600/80">
         Lend your time, gifts and heart to serve Southport. Every hour makes a
         difference.
       </p>

@@ -152,14 +152,14 @@ export default function FirstTimersPage() {
       <Section tone="navy">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> A Warm Welcome
             </span>
-            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
               You&apos;re not a stranger here — you&apos;re{" "}
               <span className="text-gold-gradient">family</span>.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-cream/70">
+            <p className="mt-6 text-lg leading-relaxed text-navy-600/80">
               At Winners Chapel International, Southport, every first timer is a gift. From the
               moment you walk through the doors, you&apos;ll find genuine warmth, real people, and a
               place where faith comes alive. Come exactly as you are — we can&apos;t wait to meet
@@ -179,12 +179,12 @@ export default function FirstTimersPage() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {expect.map((item, i) => (
             <Reveal key={item.title} delay={(i % 3) * 0.08}>
-              <div className="glass card-lift h-full rounded-2xl p-7">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+              <div className="card-lift bg-white shadow-xl ring-1 ring-navy-900/10 h-full rounded-2xl p-7">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name={item.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl text-cream">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream/60">{item.body}</p>
+                <h3 className="mt-5 font-display text-xl text-navy-900">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-navy-600/80">{item.body}</p>
               </div>
             </Reveal>
           ))}
@@ -201,14 +201,14 @@ export default function FirstTimersPage() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {practical.map((item, i) => (
             <Reveal key={item.title} delay={(i % 3) * 0.08}>
-              <div className="card-lift h-full rounded-2xl bg-navy-900/40 p-7 ring-1 ring-gold-500/10">
+              <div className="card-lift h-full rounded-2xl bg-white p-7 ring-1 ring-navy-900/10">
                 <div className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={item.icon} className="h-5 w-5" />
                   </span>
-                  <h3 className="font-display text-lg text-cream">{item.title}</h3>
+                  <h3 className="font-display text-lg text-navy-900">{item.title}</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-cream/60">{item.body}</p>
+                <p className="mt-4 text-sm leading-relaxed text-navy-600/80">{item.body}</p>
               </div>
             </Reveal>
           ))}
@@ -225,17 +225,17 @@ export default function FirstTimersPage() {
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {steps.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.1}>
-              <div className="relative h-full rounded-2xl bg-navy-900/40 p-8 ring-1 ring-gold-500/10">
+              <div className="relative h-full rounded-2xl bg-white p-8 ring-1 ring-navy-900/10">
                 <div className="flex items-center gap-4">
-                  <span className="font-display text-5xl font-bold text-gold-500/25">
+                  <span className="font-display text-5xl font-bold text-gold-500/40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={step.icon} className="h-6 w-6" />
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-xl text-cream">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream/60">{step.body}</p>
+                <h3 className="mt-6 font-display text-xl text-navy-900">{step.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-navy-600/80">{step.body}</p>
               </div>
             </Reveal>
           ))}
@@ -254,13 +254,13 @@ export default function FirstTimersPage() {
             />
             <div className="mt-8 space-y-5">
               <Reveal>
-                <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-gold-500/15 to-transparent p-6 ring-1 ring-gold-400/30">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30">
+                <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-gold-500/15 to-transparent p-6 ring-1 ring-gold-500/25">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="gift" className="h-6 w-6" />
                   </span>
                   <div>
-                    <h3 className="font-display text-lg text-cream">A Free Welcome Gift</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-cream/65">
+                    <h3 className="font-display text-lg text-navy-900">A Free Welcome Gift</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-navy-600/80">
                       Every first timer receives a thoughtful welcome gift at our desk — our way of
                       celebrating that you chose to visit us.
                     </p>
@@ -268,13 +268,13 @@ export default function FirstTimersPage() {
                 </div>
               </Reveal>
               <Reveal delay={0.1}>
-                <div className="flex items-start gap-4 rounded-2xl bg-navy-900/40 p-6 ring-1 ring-gold-500/10">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                <div className="flex items-start gap-4 rounded-2xl bg-white p-6 ring-1 ring-navy-900/10">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="message-circle" className="h-6 w-6" />
                   </span>
                   <div>
-                    <h3 className="font-display text-lg text-cream">Meet Someone</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-cream/65">
+                    <h3 className="font-display text-lg text-navy-900">Meet Someone</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-navy-600/80">
                       Prefer a personal chat first? Connect with a pastor or member and we&apos;ll
                       answer any question before you arrive.
                     </p>
@@ -319,23 +319,23 @@ export default function FirstTimersPage() {
             />
             <div className="mt-8 space-y-4">
               <div className="flex items-start gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name="map-pin" className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="font-medium text-cream">{site.address.venue}</p>
-                  <p className="text-sm text-cream/60">
+                  <p className="font-medium text-navy-900">{site.address.venue}</p>
+                  <p className="text-sm text-navy-600/80">
                     {site.address.street}, {site.address.city}, {site.address.postcode}
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name="phone" className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="font-medium text-cream">Call ahead</p>
-                  <a href={`tel:${site.phones[0].replace(/[^+\d]/g, "")}`} className="text-sm text-gold-300 link-underline">
+                  <p className="font-medium text-navy-900">Call ahead</p>
+                  <a href={`tel:${site.phones[0].replace(/[^+\d]/g, "")}`} className="text-sm text-gold-700 link-underline">
                     {site.phones[0]}
                   </a>
                 </div>
@@ -352,7 +352,7 @@ export default function FirstTimersPage() {
             </div>
           </div>
           <Reveal delay={0.1}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-gold-500/20">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-navy-900/10">
               <iframe
                 title="Map to Winners Chapel Southport"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(site.mapsQuery)}&output=embed`}
@@ -368,12 +368,12 @@ export default function FirstTimersPage() {
       {/* Closing CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/80 to-navy-950 p-10 text-center ring-1 ring-gold-500/20 sm:p-16 hero-glow">
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-cream sm:text-4xl">
+          <div className="relative overflow-hidden rounded-3xl bg-white shadow-xl p-10 text-center ring-1 ring-navy-900/10 sm:p-16">
+            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
               This Sunday, there&apos;s a{" "}
               <span className="text-gold-gradient">seat with your name on it</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-cream/65">
+            <p className="mx-auto mt-5 max-w-xl text-navy-600/80">
               Come and experience faith, love and miracles for yourself. We can&apos;t wait to
               welcome you home.
             </p>

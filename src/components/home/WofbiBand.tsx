@@ -25,7 +25,7 @@ export function WofbiBand() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/wofbi" icon="graduation-cap">Register for WOFBI</Button>
-            <Button href="/wofbi#courses" variant="outline" iconRight="arrow-right">View Courses</Button>
+            <Button href="/wofbi#courses" variant="outlineLight" iconRight="arrow-right">View Courses</Button>
           </div>
         </Reveal>
 

@@ -45,8 +45,8 @@ export function Gallery() {
               onClick={() => setActive(c)}
               className={`rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition-all duration-300 ${
                 on
-                  ? "bg-gradient-to-b from-gold-300 to-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
-                  : "ring-gold text-cream/70 hover:text-gold-300 hover:bg-gold-500/10"
+                  ? "bg-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
+                  : "bg-navy-900/5 text-navy-600 hover:bg-navy-900/10"
               }`}
             >
               {c}
@@ -59,7 +59,7 @@ export function Gallery() {
         {shown.map((p, i) => (
           <figure
             key={`${p.src}-${i}`}
-            className={`group relative overflow-hidden rounded-2xl ring-1 ring-gold-500/10 ${p.span}`}
+            className={`group relative overflow-hidden rounded-2xl ring-1 ring-navy-900/10 ${p.span}`}
           >
             <Image
               src={p.src}

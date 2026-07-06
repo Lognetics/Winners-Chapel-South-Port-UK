@@ -21,8 +21,8 @@ export function EventList() {
             onClick={() => setFilter(t)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               filter === t
-                ? "bg-gradient-to-b from-gold-300 to-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
-                : "bg-navy-900/50 text-cream/65 ring-1 ring-gold-500/10 hover:text-cream"
+                ? "bg-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
+                : "bg-navy-900/5 text-navy-600 hover:bg-navy-900/10"
             }`}
           >
             {t}
@@ -40,27 +40,27 @@ export function EventList() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="card-lift group flex h-full flex-col overflow-hidden rounded-3xl bg-navy-900/40 ring-1 ring-gold-500/10"
+              className="card-light group flex h-full flex-col overflow-hidden rounded-3xl"
             >
-              <div className="flex items-center gap-4 border-b border-gold-500/10 p-6">
-                <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-2xl bg-gold-500/10 ring-1 ring-gold-500/20">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-gold-400">
+              <div className="flex items-center gap-4 border-b border-navy-900/10 p-6">
+                <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-2xl bg-gold-500/15 ring-1 ring-gold-500/25">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-gold-600">
                     {e.month}
                   </span>
-                  <span className="font-display text-2xl font-bold leading-none text-gold-300">
+                  <span className="font-display text-2xl font-bold leading-none text-gold-700">
                     {e.day}
                   </span>
                 </div>
                 <div>
-                  <span className="inline-block rounded-full bg-navy-950/60 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/15">
+                  <span className="inline-block rounded-full bg-navy-900/5 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-700 ring-1 ring-navy-900/10">
                     {e.type}
                   </span>
-                  <p className="mt-2 text-xs text-cream/50">{e.date}</p>
+                  <p className="mt-2 text-xs text-navy-600/80">{e.date}</p>
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-xl font-semibold text-cream">{e.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-cream/60">{e.desc}</p>
+                <h3 className="font-display text-xl font-semibold text-navy-900">{e.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-600/80">{e.desc}</p>
                 <div className="mt-6 flex flex-wrap items-center gap-2">
                   <Button href="#register" size="sm" iconRight="arrow-right">
                     Register
@@ -69,7 +69,7 @@ export function EventList() {
                     href={`https://maps.google.com/?q=${encodeURIComponent(site.mapsQuery)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-9 w-9 items-center justify-center rounded-full text-cream/60 ring-1 ring-gold-500/15 transition hover:text-gold-300"
+                    className="flex h-9 w-9 items-center justify-center rounded-full text-navy-600 ring-1 ring-navy-900/10 transition hover:text-gold-700"
                     title="Directions"
                   >
                     <Icon name="navigation" className="h-4 w-4" />
@@ -78,7 +78,7 @@ export function EventList() {
                     href={site.socials.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-9 w-9 items-center justify-center rounded-full text-cream/60 ring-1 ring-gold-500/15 transition hover:text-gold-300"
+                    className="flex h-9 w-9 items-center justify-center rounded-full text-navy-600 ring-1 ring-navy-900/10 transition hover:text-gold-700"
                     title="Share"
                   >
                     <Icon name="message-square" className="h-4 w-4" />

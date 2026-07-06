@@ -40,12 +40,12 @@ export default function EventsPage() {
                 <p className="mt-2 text-gold-300">{featured.type} · {featured.date}</p>
                 <p className="mt-4 max-w-lg text-cream/70">{featured.desc}</p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button href="#register" size="lg" icon="calendar">Register Now</Button>
-                  <Button href="#calendar" size="lg" variant="outline" iconRight="arrow-right">View All Events</Button>
+                  <Button href="#register" size="lg" variant="gold" icon="calendar">Register Now</Button>
+                  <Button href="#calendar" size="lg" variant="outlineLight" iconRight="arrow-right">View All Events</Button>
                 </div>
               </div>
               <div className="glass rounded-3xl p-6 text-center">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold-400">Counting Down</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-gold-600">Counting Down</p>
                 <p className="mt-2 mb-5 font-display text-lg text-cream">The next gathering begins in</p>
                 <div className="flex justify-center"><Countdown /></div>
               </div>
@@ -67,10 +67,10 @@ export default function EventsPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal direction="right">
             <SectionHeading align="left" eyebrow="Register" title={<>Secure your <span className="text-gold-gradient">place</span></>} subtitle="Registration is free. Reserve your spot and we'll send you all the details." />
-            <div className="mt-8 space-y-3 text-sm text-cream/70">
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />Free registration for all events</p>
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />Reminders by email &amp; SMS</p>
-              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-400" />Bring your family and friends</p>
+            <div className="mt-8 space-y-3 text-sm text-navy-600/80">
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />Free registration for all events</p>
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />Reminders by email &amp; SMS</p>
+              <p className="flex items-center gap-3"><Icon name="check" className="h-5 w-5 text-gold-600" />Bring your family and friends</p>
             </div>
           </Reveal>
           <Reveal direction="left">
@@ -82,10 +82,10 @@ export default function EventsPage() {
       {/* Volunteer CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="glass flex flex-col items-center gap-6 rounded-3xl p-10 text-center sm:p-16">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20"><Icon name="hand-heart" className="h-7 w-7" /></span>
-            <h2 className="font-display text-3xl font-semibold text-cream sm:text-4xl">Serve at an <span className="text-gold-gradient">event</span></h2>
-            <p className="max-w-xl text-cream/60">Every great gathering is powered by willing hands. Join our volunteer teams and be part of something unforgettable.</p>
+          <div className="bg-white shadow-xl ring-1 ring-navy-900/10 flex flex-col items-center gap-6 rounded-3xl p-10 text-center sm:p-16">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25"><Icon name="hand-heart" className="h-7 w-7" /></span>
+            <h2 className="font-display text-3xl font-semibold text-navy-900 sm:text-4xl">Serve at an <span className="text-gold-gradient">event</span></h2>
+            <p className="max-w-xl text-navy-600/80">Every great gathering is powered by willing hands. Join our volunteer teams and be part of something unforgettable.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button href="/ministries#join" size="lg" icon="hand">Volunteer</Button>
               <Button href="/contact" size="lg" variant="outline">Ask a Question</Button>

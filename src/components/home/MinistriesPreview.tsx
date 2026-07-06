@@ -18,12 +18,12 @@ export function MinistriesPreview() {
           <Reveal key={m.slug} delay={(i % 4) * 0.05}>
             <a
               href={`/ministries#${m.slug}`}
-              className="card-lift group flex h-full items-center gap-3 rounded-2xl bg-navy-900/40 p-4 ring-1 ring-gold-500/10"
+              className="card-light group flex h-full items-center gap-3 rounded-2xl p-4"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/15 transition group-hover:bg-gold-500/20">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500/25">
                 <Icon name={m.icon} className="h-5 w-5" />
               </span>
-              <span className="text-sm font-medium text-cream/85 group-hover:text-cream">{m.name}</span>
+              <span className="text-sm font-medium text-navy-800 group-hover:text-navy-900">{m.name}</span>
             </a>
           </Reveal>
         ))}

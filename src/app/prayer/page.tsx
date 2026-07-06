@@ -69,20 +69,20 @@ export default function PrayerPage() {
       <Section tone="navy">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> The Power of Prayer
             </span>
-            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
               Where two agree, heaven{" "}
               <span className="text-gold-gradient">moves</span>.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-cream/70">
+            <p className="mt-6 text-lg leading-relaxed text-navy-600/80">
               &ldquo;Again I say unto you, that if two of you shall agree on earth as touching any
               thing that they shall ask, it shall be done for them of my Father which is in
               heaven.&rdquo; At Winners Chapel, prayer is not a last resort — it&apos;s our first
               response. Bring us your burden, and let&apos;s believe God together.
             </p>
-            <p className="mt-4 text-sm font-medium uppercase tracking-wider text-gold-400/80">
+            <p className="mt-4 text-sm font-medium uppercase tracking-wider text-gold-700">
               Matthew 18:19
             </p>
           </Reveal>
@@ -106,12 +106,12 @@ export default function PrayerPage() {
                 { icon: "heart", t: "You'll be followed up", d: "We care about your breakthrough, not just your request." },
               ].map((f) => (
                 <div key={f.t} className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={f.icon} className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="font-medium text-cream">{f.t}</p>
-                    <p className="text-sm text-cream/55">{f.d}</p>
+                    <p className="font-medium text-navy-900">{f.t}</p>
+                    <p className="text-sm text-navy-600/80">{f.d}</p>
                   </div>
                 </div>
               ))}
@@ -119,7 +119,7 @@ export default function PrayerPage() {
           </div>
           <div className="lg:col-span-3">
             <Reveal delay={0.1}>
-              <div className="glass rounded-2xl p-6 sm:p-8">
+              <div className="bg-white shadow-xl ring-1 ring-navy-900/10 rounded-2xl p-6 sm:p-8">
                 <PrayerForm />
               </div>
             </Reveal>
@@ -140,17 +140,17 @@ export default function PrayerPage() {
               <div
                 className={`card-lift flex h-full flex-col rounded-2xl p-8 ${
                   opt.highlight
-                    ? "bg-gradient-to-br from-gold-500/15 to-transparent ring-1 ring-gold-400/30"
-                    : "bg-navy-900/40 ring-1 ring-gold-500/10"
+                    ? "bg-gradient-to-br from-gold-500/15 to-transparent ring-1 ring-gold-500/25"
+                    : "bg-white ring-1 ring-navy-900/10"
                 }`}
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name={opt.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 font-display text-xl text-cream">{opt.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/60">{opt.body}</p>
+                <h3 className="mt-5 font-display text-xl text-navy-900">{opt.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600/80">{opt.body}</p>
                 {opt.highlight && (
-                  <p className="mt-4 font-display text-lg text-gold-300">{site.phones[0]}</p>
+                  <p className="mt-4 font-display text-lg text-gold-700">{site.phones[0]}</p>
                 )}
                 <Button
                   href={opt.href}
@@ -189,14 +189,14 @@ export default function PrayerPage() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {answered.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.08}>
-              <div className="glass card-lift flex h-full flex-col rounded-2xl p-8">
-                <Icon name="quote" className="h-8 w-8 text-gold-500/40" />
-                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-cream/80">
+              <div className="card-lift bg-white shadow-xl ring-1 ring-navy-900/10 flex h-full flex-col rounded-2xl p-8">
+                <Icon name="quote" className="h-8 w-8 text-gold-500/50" />
+                <p className="mt-4 flex-1 text-[15px] leading-relaxed text-navy-700">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="mt-6 flex items-center justify-between border-t border-gold-500/10 pt-5">
-                  <span className="font-display text-cream">{t.name}</span>
-                  <span className="rounded-full bg-gold-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold-300">
+                <div className="mt-6 flex items-center justify-between border-t border-navy-900/10 pt-5">
+                  <span className="font-display text-navy-900">{t.name}</span>
+                  <span className="rounded-full bg-gold-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold-700">
                     {t.category}
                   </span>
                 </div>
@@ -209,10 +209,10 @@ export default function PrayerPage() {
       {/* Prayer hotline band */}
       <Section tone="darker">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/80 to-navy-950 p-10 ring-1 ring-gold-500/20 sm:p-14 hero-glow">
+          <div className="relative overflow-hidden rounded-3xl bg-navy-900 text-cream p-10 ring-1 ring-gold-500/20 sm:p-14 hero-glow">
             <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
               <div>
-                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
                   <span className="h-px w-6 bg-gold-500/60" /> Prayer Hotline
                 </span>
                 <h2 className="mt-4 font-display text-3xl font-semibold text-cream sm:text-4xl">
@@ -224,10 +224,10 @@ export default function PrayerPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button href={`tel:${phoneHref}`} size="lg" icon="phone-call">
+                <Button href={`tel:${phoneHref}`} size="lg" variant="gold" icon="phone-call">
                   {site.phones[0]}
                 </Button>
-                <Button href={site.whatsapp} size="lg" variant="outline" icon="message-square">
+                <Button href={site.whatsapp} size="lg" variant="outlineLight" icon="message-square">
                   WhatsApp Us
                 </Button>
               </div>
@@ -240,13 +240,13 @@ export default function PrayerPage() {
       <Section tone="navy">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <Icon name="book-open" className="mx-auto h-10 w-10 text-gold-500/50" />
-            <p className="mt-6 font-display text-2xl leading-snug text-cream sm:text-3xl">
+            <Icon name="book-open" className="mx-auto h-10 w-10 text-gold-600" />
+            <p className="mt-6 font-display text-2xl leading-snug text-navy-900 sm:text-3xl">
               &ldquo;Be careful for nothing; but in every thing by prayer and supplication with
               thanksgiving let your requests be made known unto{" "}
               <span className="text-gold-gradient">God</span>.&rdquo;
             </p>
-            <p className="mt-5 text-sm font-medium uppercase tracking-wider text-gold-400/80">
+            <p className="mt-5 text-sm font-medium uppercase tracking-wider text-gold-700">
               Philippians 4:6
             </p>
           </div>
@@ -256,12 +256,12 @@ export default function PrayerPage() {
       {/* Closing CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="rounded-3xl bg-navy-900/40 p-10 text-center ring-1 ring-gold-500/15 sm:p-14">
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-cream sm:text-4xl">
+          <div className="rounded-3xl bg-white shadow-xl p-10 text-center ring-1 ring-navy-900/10 sm:p-14">
+            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
               Bring your burden. Leave with{" "}
               <span className="text-gold-gradient">breakthrough</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-cream/65">
+            <p className="mx-auto mt-5 max-w-xl text-navy-600/80">
               Join us in person as we pray, worship and believe God together for the impossible.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

@@ -11,14 +11,14 @@ export function RegisterForm() {
 
   if (sent) {
     return (
-      <div className="glass rounded-3xl p-10 text-center ring-1 ring-gold-500/20">
-        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15 text-gold-300 ring-1 ring-gold-500/30">
+      <div className="bg-white ring-1 ring-navy-900/10 shadow-xl rounded-3xl p-10 text-center">
+        <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/30">
           <Icon name="calendar" className="h-8 w-8" strokeWidth={2} />
         </span>
-        <h3 className="mt-6 font-display text-2xl font-semibold text-cream">
+        <h3 className="mt-6 font-display text-2xl font-semibold text-navy-900">
           You&apos;re registered!
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-cream/65">
+        <p className="mt-3 text-sm leading-relaxed text-navy-600/80">
           We can&apos;t wait to celebrate with you. A confirmation and event
           details will be sent to your email shortly.
         </p>
@@ -37,7 +37,7 @@ export function RegisterForm() {
         e.preventDefault();
         setSent(true);
       }}
-      className="glass rounded-3xl p-7 ring-1 ring-gold-500/15 sm:p-9"
+      className="bg-white shadow-xl rounded-3xl p-7 ring-1 ring-navy-900/10 sm:p-9"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Full Name" htmlFor="rf-name">
@@ -72,7 +72,7 @@ export function RegisterForm() {
         <Button type="submit" icon="calendar">
           Confirm Registration
         </Button>
-        <p className="text-xs text-cream/45">Free to attend · all are welcome.</p>
+        <p className="text-xs text-navy-600/80">Free to attend · all are welcome.</p>
       </div>
     </form>
   );

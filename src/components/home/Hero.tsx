@@ -91,10 +91,10 @@ export function Hero() {
             <Button href="/first-timers" size="lg" icon="church">
               Join Us This Sunday
             </Button>
-            <Button href="/media#live" size="lg" variant="outline" icon="play">
+            <Button href="/media#live" size="lg" variant="outlineLight" icon="play">
               Watch Live
             </Button>
-            <Button href="/first-timers" size="lg" variant="ghost" iconRight="arrow-right">
+            <Button href="/first-timers" size="lg" variant="ghostLight" iconRight="arrow-right">
               Plan Your Visit
             </Button>
           </motion.div>
@@ -151,7 +151,7 @@ export function Hero() {
               <Button href="/media#live" size="sm" icon="play" className="w-full">
                 Watch Live
               </Button>
-              <Button href="/prayer" size="sm" variant="outline" icon="flame" className="w-full">
+              <Button href="/prayer" size="sm" variant="outlineLight" icon="flame" className="w-full">
                 Prayer Line
               </Button>
             </div>

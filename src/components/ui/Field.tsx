@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 
 const inputCls =
-  "w-full rounded-xl bg-navy-900/60 px-4 py-3 text-sm text-cream outline-none ring-1 ring-gold-500/15 transition placeholder:text-cream/35 focus:ring-gold-400";
+  "w-full rounded-xl bg-white px-4 py-3 text-sm text-navy-900 outline-none ring-1 ring-navy-900/15 transition placeholder:text-navy-400 focus:ring-2 focus:ring-gold-500";
 
 export function Label({ children, htmlFor }: { children: ReactNode; htmlFor?: string }) {
   return (
-    <label htmlFor={htmlFor} className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-cream/60">
+    <label htmlFor={htmlFor} className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-navy-600">
       {children}
     </label>
   );

@@ -76,22 +76,22 @@ export function Assistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-40 right-4 z-50 flex h-[30rem] w-[min(22rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl glass shadow-2xl lg:bottom-24"
+            className="fixed bottom-40 right-4 z-50 flex h-[30rem] w-[min(22rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-navy-900/10 lg:bottom-24"
           >
-            <div className="flex items-center gap-3 border-b border-gold-500/15 bg-navy-900/60 p-4">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500/15 text-gold-300 ring-1 ring-gold-500/25">
+            <div className="flex items-center gap-3 border-b border-navy-900/10 bg-cream p-4">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                 <Icon name="sparkles" className="h-5 w-5" />
               </span>
               <div className="flex-1">
-                <p className="text-sm font-semibold text-cream">Church Assistant</p>
-                <p className="flex items-center gap-1.5 text-xs text-cream/50"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Online · here to help 24/7</p>
+                <p className="text-sm font-semibold text-navy-900">Church Assistant</p>
+                <p className="flex items-center gap-1.5 text-xs text-navy-500"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online · here to help 24/7</p>
               </div>
             </div>
 
-            <div className="flex-1 space-y-3 overflow-y-auto p-4">
+            <div className="flex-1 space-y-3 overflow-y-auto bg-ivory p-4">
               {msgs.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.role === "user" ? "bg-gold-500 text-navy-950" : "bg-navy-800/80 text-cream/85"}`}>
+                  <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${m.role === "user" ? "bg-gold-500 text-navy-950" : "bg-white text-navy-800 ring-1 ring-navy-900/10"}`}>
                     {m.text}
                   </div>
                 </div>
@@ -99,10 +99,10 @@ export function Assistant() {
               <div ref={endRef} />
             </div>
 
-            <div className="border-t border-gold-500/15 p-3">
+            <div className="border-t border-navy-900/10 bg-white p-3">
               <div className="mb-2 flex flex-wrap gap-1.5">
                 {suggestions.slice(0, 3).map((s) => (
-                  <button key={s} onClick={() => send(s)} className="rounded-full bg-navy-800/70 px-2.5 py-1 text-[11px] text-cream/70 transition hover:bg-gold-500/15 hover:text-gold-300">
+                  <button key={s} onClick={() => send(s)} className="rounded-full bg-navy-900/5 px-2.5 py-1 text-[11px] text-navy-600 transition hover:bg-gold-500/15 hover:text-gold-700">
                     {s}
                   </button>
                 ))}
@@ -112,7 +112,7 @@ export function Assistant() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask me anything…"
-                  className="flex-1 rounded-full bg-navy-900/70 px-4 py-2.5 text-sm text-cream outline-none ring-1 ring-gold-500/15 placeholder:text-cream/40 focus:ring-gold-400"
+                  className="flex-1 rounded-full bg-ivory px-4 py-2.5 text-sm text-navy-900 outline-none ring-1 ring-navy-900/15 placeholder:text-navy-400 focus:ring-gold-500"
                 />
                 <button type="submit" aria-label="Send" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500 text-navy-950 transition hover:bg-gold-400">
                   <Icon name="arrow-right" className="h-5 w-5" strokeWidth={2} />

@@ -57,7 +57,7 @@ export default function OurPastorPage() {
           </Reveal>
           <Reveal direction="left">
             <SectionHeading align="left" eyebrow="Biography" title={<>Called to <span className="text-gold-gradient">liberate</span> Southport</>} />
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-cream/70">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-navy-600/80">
               <p>Our Resident Pastor carries a deep passion for the presence of God and a burning desire to see lives transformed by the Word of Faith. A gifted teacher and devoted shepherd, they lead the Winners Chapel Southport family with wisdom, warmth and unwavering faith.</p>
               <p>Grounded in the mandate of Living Faith Church Worldwide, their ministry is marked by fervent prayer, practical teaching and a genuine love for people. Whether in the pulpit or over a cup of tea, their heart is that every person would discover their identity and destiny in Christ.</p>
               <p>Alongside a supportive family, they give themselves fully to the work of the ministry — believing God for a Southport where the miraculous is normal and no one is left behind.</p>
@@ -74,12 +74,12 @@ export default function OurPastorPage() {
       {/* Personal welcome quote */}
       <Section tone="darker" className="grain">
         <Reveal>
-          <figure className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/70 to-navy-950 p-10 text-center ring-1 ring-gold-500/20 sm:p-16">
+          <figure className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-white p-10 text-center ring-1 ring-navy-900/10 shadow-xl sm:p-16">
             <Icon name="quote" className="mx-auto h-12 w-12 text-gold-500/50" />
-            <blockquote className="mt-4 font-display text-2xl font-medium leading-snug text-cream sm:text-3xl">
+            <blockquote className="mt-4 font-display text-2xl font-medium leading-snug text-navy-900 sm:text-3xl">
               &ldquo;I rejoiced with those who said to me, &lsquo;Let us go to the house of the LORD.&rsquo; You are welcome here — come as you are, and let God do the rest.&rdquo;
             </blockquote>
-            <figcaption className="mt-6 text-sm uppercase tracking-[0.25em] text-gold-400">Psalm 122:1 · A Personal Welcome</figcaption>
+            <figcaption className="mt-6 text-sm uppercase tracking-[0.25em] text-gold-600">Psalm 122:1 · A Personal Welcome</figcaption>
           </figure>
         </Reveal>
       </Section>
@@ -94,7 +94,7 @@ export default function OurPastorPage() {
           </Reveal>
           <Reveal direction="left" className="lg:order-1">
             <SectionHeading align="left" eyebrow="Family" title={<>A heart for <span className="text-gold-gradient">families</span></>} subtitle="We believe strong homes build a strong church and a strong city." />
-            <p className="mt-6 text-base leading-relaxed text-cream/70">Our pastor champions the family as God&apos;s first institution. From marriage enrichment to raising godly children, the ministry is committed to building homes that honour God and reflect His love — because when families win, everyone wins.</p>
+            <p className="mt-6 text-base leading-relaxed text-navy-600/80">Our pastor champions the family as God&apos;s first institution. From marriage enrichment to raising godly children, the ministry is committed to building homes that honour God and reflect His love — because when families win, everyone wins.</p>
             <Button href="/ministries" className="mt-8" variant="outline" iconRight="arrow-right">Explore Family Ministries</Button>
           </Reveal>
         </div>
@@ -106,10 +106,10 @@ export default function OurPastorPage() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {vision.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.06}>
-              <div className="card-lift flex h-full flex-col gap-4 rounded-3xl bg-navy-900/50 p-7 ring-1 ring-gold-500/10">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20"><Icon name={v.icon} className="h-6 w-6" /></span>
-                <h3 className="font-display text-lg font-semibold text-cream">{v.title}</h3>
-                <p className="text-sm leading-relaxed text-cream/55">{v.text}</p>
+              <div className="card-light flex h-full flex-col gap-4 rounded-3xl p-7">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25"><Icon name={v.icon} className="h-6 w-6" /></span>
+                <h3 className="font-display text-lg font-semibold text-navy-900">{v.title}</h3>
+                <p className="text-sm leading-relaxed text-navy-600/80">{v.text}</p>
               </div>
             </Reveal>
           ))}
@@ -122,15 +122,15 @@ export default function OurPastorPage() {
         <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
           {books.map((b, i) => (
             <Reveal key={b.title} delay={(i % 4) * 0.06}>
-              <div className="card-lift group overflow-hidden rounded-2xl bg-navy-900/50 ring-1 ring-gold-500/10">
+              <div className="card-light group overflow-hidden rounded-2xl">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image src={b.img} alt={b.title} fill sizes="(max-width:1024px) 50vw, 22vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
                   <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-[10px] font-bold uppercase text-navy-950">{b.tag}</span>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-display text-base font-semibold text-cream">{b.title}</h3>
-                  <button className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-gold-300 hover:text-gold-200">Get Book <Icon name="arrow-right" className="h-3.5 w-3.5" /></button>
+                  <h3 className="font-display text-base font-semibold text-navy-900">{b.title}</h3>
+                  <button className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-gold-700 hover:text-gold-600">Get Book <Icon name="arrow-right" className="h-3.5 w-3.5" /></button>
                 </div>
               </div>
             </Reveal>
@@ -147,7 +147,7 @@ export default function OurPastorPage() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {sermons.map((s, i) => (
             <Reveal key={s.title} delay={(i % 4) * 0.06}>
-              <a href="/media#sermons" className="card-lift group block overflow-hidden rounded-2xl bg-navy-900/50 ring-1 ring-gold-500/10">
+              <a href="/media#sermons" className="card-light group block overflow-hidden rounded-2xl">
                 <div className="relative aspect-video overflow-hidden">
                   <Image src={s.img} alt={s.title} fill sizes="(max-width:1024px) 50vw, 22vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 flex items-center justify-center bg-navy-950/30">
@@ -155,8 +155,8 @@ export default function OurPastorPage() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="text-xs text-gold-400">{s.series}</p>
-                  <h3 className="mt-1 font-display text-base font-semibold leading-snug text-cream">{s.title}</h3>
+                  <p className="text-xs text-gold-600">{s.series}</p>
+                  <h3 className="mt-1 font-display text-base font-semibold leading-snug text-navy-900">{s.title}</h3>
                 </div>
               </a>
             </Reveal>
@@ -170,15 +170,15 @@ export default function OurPastorPage() {
         <div className="mt-14 space-y-4">
           {engagements.map((e, i) => (
             <Reveal key={e.title} delay={i * 0.06}>
-              <div className="card-lift flex flex-col gap-4 rounded-2xl bg-navy-900/50 p-6 ring-1 ring-gold-500/10 sm:flex-row sm:items-center sm:justify-between">
+              <div className="card-light flex flex-col gap-4 rounded-2xl p-6 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-5">
-                  <span className="flex h-16 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-gold-500/10 text-center ring-1 ring-gold-500/20">
-                    <span className="font-display text-sm font-bold text-gold-300">{e.date}</span>
+                  <span className="flex h-16 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-gold-500/15 text-center ring-1 ring-gold-500/25">
+                    <span className="font-display text-sm font-bold text-gold-700">{e.date}</span>
                   </span>
                   <div>
-                    <span className="rounded-full bg-navy-800/80 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-300">{e.type}</span>
-                    <h3 className="mt-1.5 font-display text-lg font-semibold text-cream">{e.title}</h3>
-                    <p className="flex items-center gap-1.5 text-sm text-cream/55"><Icon name="map-pin" className="h-4 w-4 text-gold-400" />{e.place}</p>
+                    <span className="rounded-full bg-navy-900/5 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold-700">{e.type}</span>
+                    <h3 className="mt-1.5 font-display text-lg font-semibold text-navy-900">{e.title}</h3>
+                    <p className="flex items-center gap-1.5 text-sm text-navy-600/80"><Icon name="map-pin" className="h-4 w-4 text-gold-600" />{e.place}</p>
                   </div>
                 </div>
                 <Button href="/events" variant="outline" size="sm" iconRight="arrow-right">Details</Button>
@@ -191,12 +191,12 @@ export default function OurPastorPage() {
       {/* CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="glass flex flex-col items-center gap-6 rounded-3xl p-10 text-center sm:p-16">
+          <div className="flex flex-col items-center gap-6 rounded-3xl bg-navy-900 p-10 text-center text-cream shadow-xl sm:p-16">
             <h2 className="font-display text-3xl font-semibold text-cream sm:text-4xl">Let&apos;s <span className="text-gold-gradient">connect</span></h2>
-            <p className="max-w-xl text-cream/60">Our pastor would love to meet you. Come this Sunday, or reach out for prayer and a personal welcome.</p>
+            <p className="max-w-xl text-cream/80">Our pastor would love to meet you. Come this Sunday, or reach out for prayer and a personal welcome.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/first-timers" size="lg" icon="hand">Plan Your Visit</Button>
-              <Button href="/prayer" size="lg" variant="outline" icon="flame">Request Prayer</Button>
+              <Button href="/first-timers" size="lg" variant="gold" icon="hand">Plan Your Visit</Button>
+              <Button href="/prayer" size="lg" variant="outlineLight" icon="flame">Request Prayer</Button>
             </div>
           </div>
         </Reveal>

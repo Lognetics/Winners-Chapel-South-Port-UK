@@ -71,37 +71,37 @@ export default function ContactPage() {
           </div>
 
           <Reveal delay={0.1}>
-            <div className="glass rounded-2xl p-8">
-              <h3 className="font-display text-2xl text-cream">Contact Details</h3>
+            <div className="bg-white shadow-xl ring-1 ring-navy-900/10 rounded-2xl p-8">
+              <h3 className="font-display text-2xl text-navy-900">Contact Details</h3>
               <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="map-pin" className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-cream/50">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                       Address
                     </p>
-                    <p className="mt-1 text-cream">{site.address.venue}</p>
-                    <p className="text-sm text-cream/60">
+                    <p className="mt-1 text-navy-900">{site.address.venue}</p>
+                    <p className="text-sm text-navy-600/80">
                       {site.address.street}, {site.address.city}, {site.address.postcode}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="phone" className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-cream/50">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                       Phone
                     </p>
                     {site.phones.map((p) => (
                       <a
                         key={p}
                         href={`tel:${phoneHref(p)}`}
-                        className="mt-1 block text-cream transition hover:text-gold-300"
+                        className="mt-1 block text-navy-900 transition hover:text-gold-700"
                       >
                         {p}
                       </a>
@@ -110,16 +110,16 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="mail" className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-cream/50">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                       Email
                     </p>
                     <a
                       href={`mailto:${site.email}`}
-                      className="mt-1 block break-all text-cream transition hover:text-gold-300"
+                      className="mt-1 block break-all text-navy-900 transition hover:text-gold-700"
                     >
                       {site.email}
                     </a>
@@ -127,19 +127,19 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name="clock" className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-cream/50">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                       Service Times
                     </p>
-                    <ul className="mt-1 space-y-0.5 text-sm text-cream/70">
+                    <ul className="mt-1 space-y-0.5 text-sm text-navy-600/80">
                       {services
                         .filter((s) => s.tag === "Weekly")
                         .map((s) => (
                           <li key={s.name}>
-                            <span className="text-cream">{s.day}</span> · {s.time} — {s.name}
+                            <span className="text-navy-900">{s.day}</span> · {s.time} — {s.name}
                           </li>
                         ))}
                     </ul>
@@ -147,8 +147,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-gold-500/10 pt-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-cream/50">
+              <div className="mt-8 border-t border-navy-900/10 pt-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-navy-600/80">
                   Follow Us
                 </p>
                 <div className="mt-3 flex gap-3">
@@ -159,7 +159,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={s.name}
-                      className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-900/60 text-cream/70 ring-1 ring-gold-500/15 transition hover:bg-gold-500/10 hover:text-gold-300"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-900/5 text-navy-700 ring-1 ring-navy-900/10 transition hover:bg-gold-500/15 hover:text-gold-700"
                     >
                       <BrandIcon name={s.name} />
                     </a>
@@ -179,7 +179,7 @@ export default function ContactPage() {
           subtitle={site.fullAddress}
         />
         <Reveal delay={0.1} className="mt-12">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl ring-1 ring-gold-500/20">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl ring-1 ring-navy-900/10">
             <iframe
               title="Map to Winners Chapel Southport"
               src={`https://maps.google.com/maps?q=${encodeURIComponent(site.mapsQuery)}&output=embed`}
@@ -205,24 +205,24 @@ export default function ContactPage() {
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Emergency card */}
           <Reveal>
-            <div className="flex h-full flex-col rounded-2xl bg-gradient-to-br from-gold-500/15 to-transparent p-8 ring-1 ring-gold-400/30">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30">
+            <div className="flex h-full flex-col rounded-2xl bg-gradient-to-br from-gold-500/15 to-transparent p-8 ring-1 ring-gold-500/25">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                 <Icon name="phone-call" className="h-6 w-6" />
               </span>
-              <h3 className="mt-5 font-display text-xl text-cream">Emergency Contacts</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/65">
+              <h3 className="mt-5 font-display text-xl text-navy-900">Emergency Contacts</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600/80">
                 Need urgent prayer or pastoral care? Our prayer line is here for you, day or night.
               </p>
               <div className="mt-6 space-y-3">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-cream/50">Prayer Line</p>
-                  <a href={`tel:${phoneHref(site.phones[0])}`} className="font-display text-lg text-gold-300 link-underline">
+                  <p className="text-xs uppercase tracking-wider text-navy-600/80">Prayer Line</p>
+                  <a href={`tel:${phoneHref(site.phones[0])}`} className="font-display text-lg text-gold-700 link-underline">
                     {site.phones[0]}
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-cream/50">Pastoral Care</p>
-                  <a href={`tel:${phoneHref(site.phones[1])}`} className="font-display text-lg text-gold-300 link-underline">
+                  <p className="text-xs uppercase tracking-wider text-navy-600/80">Pastoral Care</p>
+                  <a href={`tel:${phoneHref(site.phones[1])}`} className="font-display text-lg text-gold-700 link-underline">
                     {site.phones[1]}
                   </a>
                 </div>
@@ -242,15 +242,15 @@ export default function ContactPage() {
                 <Reveal key={d.title} delay={(i % 2) * 0.08}>
                   <a
                     href={`mailto:${d.email}`}
-                    className="card-lift flex h-full items-start gap-4 rounded-2xl bg-navy-900/40 p-6 ring-1 ring-gold-500/10"
+                    className="card-lift flex h-full items-start gap-4 rounded-2xl bg-white p-6 ring-1 ring-navy-900/10"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                       <Icon name={d.icon} className="h-5 w-5" />
                     </span>
                     <div className="min-w-0">
-                      <h4 className="font-display text-lg text-cream">{d.title}</h4>
-                      <p className="mt-1 text-sm leading-relaxed text-cream/55">{d.desc}</p>
-                      <span className="mt-2 block break-all text-xs font-medium text-gold-300">
+                      <h4 className="font-display text-lg text-navy-900">{d.title}</h4>
+                      <p className="mt-1 text-sm leading-relaxed text-navy-600/80">{d.desc}</p>
+                      <span className="mt-2 block break-all text-xs font-medium text-gold-700">
                         {d.email}
                       </span>
                     </div>
@@ -265,10 +265,10 @@ export default function ContactPage() {
       {/* WhatsApp band */}
       <Section tone="darker">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/80 to-navy-950 p-10 ring-1 ring-gold-500/20 sm:p-14 hero-glow">
+          <div className="relative overflow-hidden rounded-3xl bg-navy-900 text-cream p-10 ring-1 ring-gold-500/20 sm:p-14 hero-glow">
             <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
               <div className="flex items-center gap-5">
-                <span className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-300 ring-1 ring-gold-400/30 sm:flex">
+                <span className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 sm:flex">
                   <BrandIcon name="whatsapp" className="h-8 w-8" />
                 </span>
                 <div>
@@ -292,16 +292,16 @@ export default function ContactPage() {
       {/* Newsletter */}
       <Section tone="navy">
         <Reveal>
-          <div className="rounded-3xl bg-navy-900/40 p-10 ring-1 ring-gold-500/15 sm:p-14">
+          <div className="rounded-3xl bg-white shadow-xl p-10 ring-1 ring-navy-900/10 sm:p-14">
             <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
               <div>
-                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
                   <span className="h-px w-6 bg-gold-500/60" /> Stay Connected
                 </span>
-                <h2 className="mt-4 font-display text-3xl font-semibold text-cream sm:text-4xl">
+                <h2 className="mt-4 font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
                   Get encouragement in your inbox
                 </h2>
-                <p className="mt-3 max-w-xl text-cream/65">
+                <p className="mt-3 max-w-xl text-navy-600/80">
                   Sermons, events and words of faith — delivered straight to you. No spam, just
                   goodness.
                 </p>
@@ -316,11 +316,11 @@ export default function ContactPage() {
       <Section tone="darker">
         <Reveal>
           <div className="text-center">
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-cream sm:text-4xl">
+            <h2 className="mx-auto max-w-2xl font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
               We can&apos;t wait to{" "}
               <span className="text-gold-gradient">meet you</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-xl text-cream/65">
+            <p className="mx-auto mt-5 max-w-xl text-navy-600/80">
               Join us this Sunday and experience the Winners family for yourself.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">

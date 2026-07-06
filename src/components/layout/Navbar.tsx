@@ -53,12 +53,12 @@ export function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy-950/85 backdrop-blur-xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.8)] ring-1 ring-gold-500/10"
+            ? "bg-ivory/90 backdrop-blur-xl shadow-[0_10px_40px_-24px_rgba(12,21,51,0.5)] ring-1 ring-navy-900/5"
             : "bg-transparent"
         }`}
       >
         <nav className="container-x flex h-18 items-center justify-between py-3">
-          <Logo />
+          <Logo onLight={scrolled} />
 
           <div className="hidden items-center gap-0.5 lg:flex">
             {nav.map((item) => (
@@ -72,8 +72,8 @@ export function Navbar() {
                   href={item.href}
                   className={`flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[13px] font-medium tracking-tight transition-colors xl:px-4 xl:text-sm ${
                     pathname === item.href
-                      ? "text-gold-300"
-                      : "text-cream/70 hover:text-cream"
+                      ? scrolled ? "text-gold-700" : "text-gold-300"
+                      : scrolled ? "text-navy-700 hover:text-navy-900" : "text-cream/75 hover:text-cream"
                   }`}
                 >
                   {item.label}
@@ -88,15 +88,15 @@ export function Navbar() {
                       transition={{ duration: 0.2 }}
                       className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3"
                     >
-                      <div className="glass overflow-hidden rounded-2xl p-2 shadow-2xl">
+                      <div className="overflow-hidden rounded-2xl bg-white p-2 shadow-2xl ring-1 ring-navy-900/10">
                         {item.children.map((c) => (
                           <Link
                             key={c.href}
                             href={c.href}
                             className="flex flex-col gap-0.5 rounded-xl px-4 py-3 transition-colors hover:bg-gold-500/10"
                           >
-                            <span className="text-sm font-medium text-cream">{c.label}</span>
-                            {c.desc && <span className="text-xs text-cream/50">{c.desc}</span>}
+                            <span className="text-sm font-medium text-navy-900">{c.label}</span>
+                            {c.desc && <span className="text-xs text-navy-500">{c.desc}</span>}
                           </Link>
                         ))}
                       </div>
@@ -126,7 +126,9 @@ export function Navbar() {
             </Link>
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex h-11 w-11 items-center justify-center rounded-full ring-gold text-cream lg:hidden"
+              className={`flex h-11 w-11 items-center justify-center rounded-full lg:hidden ${
+                scrolled ? "border border-navy-900/15 text-navy-800" : "ring-gold text-cream"
+              }`}
               aria-label="Toggle menu"
               aria-expanded={open}
             >

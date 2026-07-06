@@ -142,7 +142,7 @@ export default function CsrPage() {
         <div className="container-x relative z-10 py-20 sm:py-24">
           <Reveal>
             <div className="text-center">
-              <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+              <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
                 <span className="h-px w-6 bg-gold-500/60" /> Our Impact
               </span>
               <h2 className="mx-auto mt-5 max-w-2xl font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
@@ -182,17 +182,17 @@ export default function CsrPage() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {csrPrograms.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 0.08}>
-              <article className="card-lift group flex h-full flex-col rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-8 ring-1 ring-gold-500/10">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500/20">
+              <article className="card-light group flex h-full flex-col rounded-3xl p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500/25">
                   <Icon name={p.icon} className="h-7 w-7" />
                 </span>
-                <h3 className="mt-6 font-display text-xl font-semibold text-cream">
+                <h3 className="mt-6 font-display text-xl font-semibold text-navy-900">
                   {p.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-cream/60">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-600/80">
                   {p.desc}
                 </p>
-                <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-500/10 px-3 py-1.5 text-xs font-semibold text-gold-300 ring-1 ring-gold-500/20">
+                <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-500/15 px-3 py-1.5 text-xs font-semibold text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name="sparkles" className="h-3.5 w-3.5" /> {p.stat}
                 </p>
               </article>
@@ -221,7 +221,7 @@ export default function CsrPage() {
                 direction={s.reverse ? "left" : "right"}
                 className={s.reverse ? "lg:order-2" : ""}
               >
-                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl ring-1 ring-gold-500/15">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl ring-1 ring-navy-900/10">
                   <Image
                     src={s.img}
                     alt={s.title}
@@ -238,17 +238,17 @@ export default function CsrPage() {
                 className={s.reverse ? "lg:order-1" : ""}
               >
                 <div>
-                  <h3 className="font-display text-2xl font-semibold text-cream sm:text-3xl">
+                  <h3 className="font-display text-2xl font-semibold text-navy-900 sm:text-3xl">
                     {s.title}
                   </h3>
-                  <p className="mt-4 leading-relaxed text-cream/70">{s.desc}</p>
+                  <p className="mt-4 leading-relaxed text-navy-600/80">{s.desc}</p>
                   <ul className="mt-6 space-y-3">
                     {s.points.map((pt) => (
                       <li
                         key={pt}
-                        className="flex items-start gap-3 text-sm text-cream/75"
+                        className="flex items-start gap-3 text-sm text-navy-800"
                       >
-                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-300">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold-500/15 text-gold-700">
                           <Icon name="check" className="h-3.5 w-3.5" strokeWidth={2.5} />
                         </span>
                         {pt}
@@ -296,14 +296,14 @@ export default function CsrPage() {
                   },
                 ].map((b) => (
                   <div key={b.title} className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                       <Icon name={b.icon} className="h-5 w-5" />
                     </span>
                     <div>
-                      <h4 className="font-display text-lg font-semibold text-cream">
+                      <h4 className="font-display text-lg font-semibold text-navy-900">
                         {b.title}
                       </h4>
-                      <p className="mt-1 text-sm leading-relaxed text-cream/60">
+                      <p className="mt-1 text-sm leading-relaxed text-navy-600/80">
                         {b.desc}
                       </p>
                     </div>
@@ -323,7 +323,7 @@ export default function CsrPage() {
             <div className="absolute inset-0 hero-glow" />
             <div className="relative z-10 flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
               <div>
-                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+                <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
                   <span className="h-px w-6 bg-gold-500/60" /> Fuel The Mission
                 </span>
                 <h2 className="mt-5 max-w-2xl font-display text-3xl font-semibold leading-tight text-cream sm:text-4xl">
@@ -339,7 +339,7 @@ export default function CsrPage() {
                 <Button href="/giving" icon="gift">
                   Give to CSR
                 </Button>
-                <Button href="#volunteer" variant="outline">
+                <Button href="#volunteer" variant="outlineLight">
                   Volunteer Instead
                 </Button>
               </div>
@@ -362,20 +362,20 @@ export default function CsrPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {stories.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.08}>
-              <article className="card-lift group flex h-full flex-col rounded-3xl bg-gradient-to-b from-navy-900/60 to-navy-950 p-8 ring-1 ring-gold-500/10">
+              <article className="card-light group flex h-full flex-col rounded-3xl p-8">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                     <Icon name={s.icon} className="h-6 w-6" />
                   </span>
-                  <span className="rounded-full bg-navy-900/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-300 ring-1 ring-gold-500/15">
+                  <span className="rounded-full bg-navy-900/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold-700 ring-1 ring-navy-900/10">
                     {s.program}
                   </span>
                 </div>
-                <Icon name="quote" className="mt-6 h-7 w-7 text-gold-500/40" />
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-cream/75">
+                <Icon name="quote" className="mt-6 h-7 w-7 text-gold-600/60" />
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600/80">
                   {s.story}
                 </p>
-                <p className="mt-6 border-t border-gold-500/10 pt-4 font-display text-base font-semibold text-cream">
+                <p className="mt-6 border-t border-navy-900/10 pt-4 font-display text-base font-semibold text-navy-900">
                   {s.name}
                 </p>
               </article>
@@ -404,7 +404,7 @@ export default function CsrPage() {
           ].map((src, i) => (
             <Reveal key={src + i} delay={i * 0.06}>
               <figure
-                className={`group relative overflow-hidden rounded-2xl ring-1 ring-gold-500/10 ${
+                className={`group relative overflow-hidden rounded-2xl ring-1 ring-navy-900/10 ${
                   i === 1 ? "col-span-2 aspect-[16/9] md:col-span-2" : "aspect-[4/3]"
                 }`}
               >
@@ -441,20 +441,20 @@ export default function CsrPage() {
                 {reports.map((r) => (
                   <div
                     key={r.title}
-                    className="group flex items-center gap-4 rounded-2xl bg-navy-900/50 p-5 ring-1 ring-gold-500/10 transition hover:ring-gold-400/30"
+                    className="group flex items-center gap-4 rounded-2xl bg-white p-5 ring-1 ring-navy-900/10 shadow-xl transition hover:ring-gold-500/30"
                   >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20 transition group-hover:bg-gold-500 group-hover:text-navy-950">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25 transition group-hover:bg-gold-500 group-hover:text-navy-950">
                       <Icon name="download" className="h-5 w-5" />
                     </span>
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-display text-base font-medium text-cream">
+                      <h4 className="font-display text-base font-medium text-navy-900">
                         {r.title}
                       </h4>
-                      <p className="text-xs text-cream/45">{r.size}</p>
+                      <p className="text-xs text-navy-600/80">{r.size}</p>
                     </div>
                     <Icon
                       name="arrow-right"
-                      className="h-5 w-5 shrink-0 text-cream/40 transition group-hover:translate-x-1 group-hover:text-gold-300"
+                      className="h-5 w-5 shrink-0 text-navy-600/80 transition group-hover:translate-x-1 group-hover:text-gold-700"
                     />
                   </div>
                 ))}
@@ -478,9 +478,9 @@ export default function CsrPage() {
                 {partners.map((p) => (
                   <span
                     key={p}
-                    className="inline-flex items-center gap-2 rounded-full bg-navy-900/50 px-5 py-3 text-sm font-medium text-cream/75 ring-1 ring-gold-500/15"
+                    className="inline-flex items-center gap-2 rounded-full bg-navy-900/5 px-5 py-3 text-sm font-medium text-navy-800 ring-1 ring-navy-900/10"
                   >
-                    <Icon name="handshake" className="h-4 w-4 text-gold-400" />
+                    <Icon name="handshake" className="h-4 w-4 text-gold-600" />
                     {p}
                   </span>
                 ))}
@@ -500,7 +500,7 @@ export default function CsrPage() {
         <div className="absolute inset-0 hero-glow" />
         <div className="container-x relative z-10 py-24 text-center sm:py-32">
           <Reveal>
-            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+            <span className="inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">
               <span className="h-px w-6 bg-gold-500/60" /> Be The Difference
             </span>
             <h2 className="mx-auto mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight text-cream sm:text-5xl">

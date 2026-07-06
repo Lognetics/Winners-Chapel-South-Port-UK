@@ -27,8 +27,8 @@ export function SermonGrid() {
               onClick={() => setActive(c)}
               className={`rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition-all duration-300 ${
                 on
-                  ? "bg-gradient-to-b from-gold-300 to-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
-                  : "ring-gold text-cream/70 hover:text-gold-300 hover:bg-gold-500/10"
+                  ? "bg-gold-500 text-navy-950 shadow-[0_10px_30px_-8px_rgba(212,175,55,0.5)]"
+                  : "bg-navy-900/5 text-navy-600 hover:bg-navy-900/10"
               }`}
             >
               {c}
@@ -41,7 +41,7 @@ export function SermonGrid() {
         {filtered.map((s) => (
           <article
             key={s.title}
-            className="card-lift group relative flex flex-col overflow-hidden rounded-3xl bg-navy-900/50 ring-1 ring-gold-500/10"
+            className="card-light group relative flex flex-col overflow-hidden rounded-3xl"
           >
             <div className="relative aspect-video overflow-hidden">
               <Image
@@ -68,18 +68,18 @@ export function SermonGrid() {
               </button>
             </div>
             <div className="flex flex-1 flex-col p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gold-400">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold-600">
                 {s.series} · {s.date}
               </p>
-              <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-cream">
+              <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-navy-900">
                 {s.title}
               </h3>
-              <p className="mt-1 text-sm text-cream/50">{s.speaker}</p>
+              <p className="mt-1 text-sm text-navy-600/80">{s.speaker}</p>
               <div className="mt-auto flex items-center gap-4 pt-4 text-xs">
-                <button className="flex items-center gap-1.5 text-cream/70 transition hover:text-gold-300">
+                <button className="flex items-center gap-1.5 text-navy-600 transition hover:text-gold-700">
                   <Icon name="download" className="h-4 w-4" /> MP3
                 </button>
-                <button className="flex items-center gap-1.5 text-cream/70 transition hover:text-gold-300">
+                <button className="flex items-center gap-1.5 text-navy-600 transition hover:text-gold-700">
                   <Icon name="pen-line" className="h-4 w-4" /> Notes
                 </button>
               </div>
@@ -89,7 +89,7 @@ export function SermonGrid() {
       </div>
 
       {filtered.length === 0 && (
-        <p className="mt-10 text-center text-cream/50">
+        <p className="mt-10 text-center text-navy-600/80">
           No messages in this filter yet. Check back soon.
         </p>
       )}

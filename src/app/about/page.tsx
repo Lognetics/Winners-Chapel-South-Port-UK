@@ -69,7 +69,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal direction="left">
             <SectionHeading align="left" eyebrow="Our Journey" title={<>Rooted in faith, growing in <span className="text-gold-gradient">love</span></>} />
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-cream/70">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-navy-600/80">
               <p>Winners Chapel International, Southport began with a simple conviction: that the undiluted Word of Faith, preached without compromise, has the power to liberate lives. What started as a small fellowship has become a thriving family drawn from every background and nation.</p>
               <p>We are part of {site.commission}, the global commission founded by {site.presidingBishop} and mandated to liberate the world from all oppression of the devil. That same mandate beats at the heart of everything we do in Southport.</p>
               <p>Today we gather week by week to worship God, grow in the Word, serve our city, and see the miraculous become normal. Whoever you are, there is a place for you here.</p>
@@ -88,12 +88,12 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {mvm.map((m, i) => (
             <Reveal key={m.title} delay={i * 0.08}>
-              <div className="card-lift flex h-full flex-col gap-4 rounded-3xl bg-navy-900/50 p-8 ring-1 ring-gold-500/10">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/10 text-gold-300 ring-1 ring-gold-500/20">
+              <div className="card-light flex h-full flex-col gap-4 rounded-3xl p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-500/15 text-gold-700 ring-1 ring-gold-500/25">
                   <Icon name={m.icon} className="h-7 w-7" />
                 </span>
-                <h3 className="font-display text-2xl font-semibold text-cream">{m.title}</h3>
-                <p className="text-sm leading-relaxed text-cream/60">{m.text}</p>
+                <h3 className="font-display text-2xl font-semibold text-navy-900">{m.title}</h3>
+                <p className="text-sm leading-relaxed text-navy-600/80">{m.text}</p>
               </div>
             </Reveal>
           ))}
@@ -101,12 +101,12 @@ export default function AboutPage() {
 
         {/* The Liberation Mandate quote */}
         <Reveal className="mt-12">
-          <figure className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800/70 to-navy-950 p-10 text-center ring-1 ring-gold-500/20 sm:p-16">
+          <figure className="relative overflow-hidden rounded-3xl bg-white p-10 text-center ring-1 ring-navy-900/10 shadow-xl sm:p-16">
             <Icon name="quote" className="mx-auto h-12 w-12 text-gold-500/50" />
-            <blockquote className="mx-auto mt-4 max-w-3xl font-display text-2xl font-medium leading-snug text-cream sm:text-3xl">
+            <blockquote className="mx-auto mt-4 max-w-3xl font-display text-2xl font-medium leading-snug text-navy-900 sm:text-3xl">
               &ldquo;{site.mandate}&rdquo;
             </blockquote>
-            <figcaption className="mt-6 text-sm uppercase tracking-[0.25em] text-gold-400">The Liberation Mandate</figcaption>
+            <figcaption className="mt-6 text-sm uppercase tracking-[0.25em] text-gold-600">The Liberation Mandate</figcaption>
           </figure>
         </Reveal>
       </Section>
@@ -117,9 +117,9 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {twelvePillars.map((p, i) => (
             <Reveal key={p} delay={(i % 3) * 0.05}>
-              <div className="card-lift flex items-center gap-4 rounded-2xl bg-navy-900/40 p-5 ring-1 ring-gold-500/10">
+              <div className="card-light flex items-center gap-4 rounded-2xl p-5">
                 <span className="font-display text-2xl font-bold text-gold-gradient">{String(i + 1).padStart(2, "0")}</span>
-                <span className="text-sm font-medium text-cream/85">{p}</span>
+                <span className="text-sm font-medium text-navy-800">{p}</span>
               </div>
             </Reveal>
           ))}
@@ -142,7 +142,7 @@ export default function AboutPage() {
       {/* Global Commission */}
       <Section tone="navy">
         <SectionHeading eyebrow="Global Commission" title={<>A local church with a <span className="text-gold-gradient">global</span> reach</>} subtitle="Winners Chapel International is part of Living Faith Church Worldwide — one of the fastest-growing church movements on earth." />
-        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-gold-500/10 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-navy-900/10 ring-1 ring-navy-900/10 lg:grid-cols-4">
           {[
             { v: 150, s: "+", l: "Nations Reached" },
             { v: 6000, s: "+", l: "Churches Worldwide" },
@@ -150,9 +150,9 @@ export default function AboutPage() {
             { v: 40, s: "+", l: "Years of Impact" },
           ].map((s, i) => (
             <Reveal key={s.l} delay={i * 0.05}>
-              <div className="flex h-full flex-col items-center justify-center gap-2 bg-navy-950 px-4 py-10 text-center">
+              <div className="flex h-full flex-col items-center justify-center gap-2 bg-white px-4 py-10 text-center">
                 <span className="font-display text-3xl font-bold text-gold-gradient sm:text-4xl"><CountUp to={s.v} suffix={s.s} /></span>
-                <span className="text-xs uppercase tracking-wider text-cream/55">{s.l}</span>
+                <span className="text-xs uppercase tracking-wider text-navy-600/80">{s.l}</span>
               </div>
             </Reveal>
           ))}
@@ -165,17 +165,17 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {leaders.map((l, i) => (
             <Reveal key={l.name} delay={(i % 3) * 0.06}>
-              <div className="card-lift group overflow-hidden rounded-3xl bg-navy-900/50 ring-1 ring-gold-500/10">
+              <div className="card-light group overflow-hidden rounded-3xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image src={l.img} alt={l.name} fill sizes="(max-width:1024px) 100vw, 30vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
                 </div>
                 <div className="flex items-center justify-between p-6">
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-cream">{l.name}</h3>
-                    <p className="text-sm text-gold-300/80">{l.role}</p>
+                    <h3 className="font-display text-lg font-semibold text-navy-900">{l.name}</h3>
+                    <p className="text-sm text-gold-700">{l.role}</p>
                   </div>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full ring-gold text-gold-300"><Icon name="mail" className="h-4 w-4" /></span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-navy-900/15 text-gold-600"><Icon name="mail" className="h-4 w-4" /></span>
                 </div>
               </div>
             </Reveal>
@@ -189,10 +189,10 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-5 md:grid-cols-4">
           {timeline.map((t, i) => (
             <Reveal key={t.year} delay={i * 0.08}>
-              <div className="relative flex h-full flex-col rounded-2xl bg-navy-900/40 p-6 ring-1 ring-gold-500/10">
+              <div className="card-light relative flex h-full flex-col rounded-2xl p-6">
                 <span className="font-display text-3xl font-bold text-gold-gradient">{t.year}</span>
-                <h3 className="mt-3 font-display text-lg font-semibold text-cream">{t.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/55">{t.text}</p>
+                <h3 className="mt-3 font-display text-lg font-semibold text-navy-900">{t.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-navy-600/80">{t.text}</p>
               </div>
             </Reveal>
           ))}
@@ -202,12 +202,12 @@ export default function AboutPage() {
       {/* CTA */}
       <Section tone="darker">
         <Reveal>
-          <div className="glass flex flex-col items-center gap-6 rounded-3xl p-10 text-center sm:p-16">
+          <div className="flex flex-col items-center gap-6 rounded-3xl bg-navy-900 p-10 text-center text-cream shadow-xl sm:p-16">
             <h2 className="font-display text-3xl font-semibold text-cream sm:text-4xl">Come and be part of the <span className="text-gold-gradient">family</span></h2>
-            <p className="max-w-xl text-cream/60">We would love to welcome you this Sunday. Plan your visit or reach out — there&apos;s a seat with your name on it.</p>
+            <p className="max-w-xl text-cream/80">We would love to welcome you this Sunday. Plan your visit or reach out — there&apos;s a seat with your name on it.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/first-timers" size="lg" icon="hand">Plan Your Visit</Button>
-              <Button href="/contact" size="lg" variant="outline">Contact Us</Button>
+              <Button href="/first-timers" size="lg" variant="gold" icon="hand">Plan Your Visit</Button>
+              <Button href="/contact" size="lg" variant="outlineLight">Contact Us</Button>
             </div>
           </div>
         </Reveal>
